@@ -8,6 +8,7 @@
   
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
   }
 }
 
@@ -43,4 +44,44 @@
   .text-shadow-lg {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+}
+
+/* News Ticker Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
+}
+
+/* BHU-style gradient backgrounds */
+.bhu-gradient-left {
+  background: linear-gradient(to bottom, #fbbf24, #f97316);
+}
+
+.bhu-gradient-right {
+  background: linear-gradient(to bottom, #f97316, #ffffff);
+}
+
+/* Enhanced shadow effects */
+.bhu-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Diamond frame styling */
+.diamond-frame {
+  transform: rotate(45deg);
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.diamond-frame img {
+  transform: rotate(-45deg) scale(1.2);
 }
