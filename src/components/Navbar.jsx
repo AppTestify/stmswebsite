@@ -194,60 +194,47 @@ const Navbar = () => {
               name: 'ACADEMICS FACILITIES', 
               path: '/academics/facilities/academics-facilities',
               submenu: [
-                { 
-                  name: 'LABORATORIES', 
-                  path: '/academics/facilities/academics-facilities/laboratories',
-                  submenu: [
-                    { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/laboratories/computer-laboratory' },
-                    { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/laboratories/physics-chemistry-biology-lab' },
-                    {
-                      name: 'SPECIALIZED LABS',
-                      path: '/academics/facilities/academics-facilities/laboratories/specialized',
-                      submenu: [
-                        { name: 'ROBOTICS LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/robotics' },
-                        { name: 'AI & ML LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/ai-ml' },
-                        {
-                          name: 'RESEARCH CENTERS',
-                          path: '/academics/facilities/academics-facilities/laboratories/specialized/research',
-                          submenu: [
-                            { name: 'QUANTUM COMPUTING', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/quantum' },
-                            { name: 'BIOTECH RESEARCH', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/biotech' }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                { 
-                  name: 'CREATIVE SPACES', 
-                  path: '/academics/facilities/academics-facilities/creative-spaces',
-                  submenu: [
-                    { name: 'ARTS AND CRAFT CENTRE', path: '/academics/facilities/academics-facilities/creative-spaces/arts-and-craft-centre' },
-                    { name: 'MUSIC ROOM', path: '/academics/facilities/academics-facilities/creative-spaces/music-room' },
-                    {
-                      name: 'DIGITAL MEDIA',
-                      path: '/academics/facilities/academics-facilities/creative-spaces/digital-media',
-                      submenu: [
-                        { name: 'VIDEO PRODUCTION', path: '/academics/facilities/academics-facilities/creative-spaces/digital-media/video' },
-                        { name: 'PHOTOGRAPHY STUDIO', path: '/academics/facilities/academics-facilities/creative-spaces/digital-media/photo' }
-                      ]
-                    }
-                  ]
-                },
+                // { 
+                //   name: 'LABORATORIES', 
+                //   path: '/academics/facilities/academics-facilities/laboratories',
+                //   submenu: [
+                //     { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/laboratories/computer-laboratory' },
+                //     { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/laboratories/physics-chemistry-biology-lab' },
+                //     {
+                //       name: 'SPECIALIZED LABS',
+                //       path: '/academics/facilities/academics-facilities/laboratories/specialized',
+                //       submenu: [
+                //         { name: 'ROBOTICS LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/robotics' },
+                //         { name: 'AI & ML LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/ai-ml' },
+                //         {
+                //           name: 'RESEARCH CENTERS',
+                //           path: '/academics/facilities/academics-facilities/laboratories/specialized/research',
+                //           submenu: [
+                //             { name: 'QUANTUM COMPUTING', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/quantum' },
+                //             { name: 'BIOTECH RESEARCH', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/biotech' }
+                //           ]
+                //         }
+                //       ]
+                //     }
+                //   ]
+                // },
                 { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/computer-laboratory' },
                 { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/physics-chemistry-biology-lab' },
-                { name: 'LIBRARY', path: '/academics/facilities/academics-facilities/library' }
+                { name: 'LIBRARY', path: '/academics/facilities/academics-facilities/library' },
+                { name: 'ART AND CRAFT CENTER', path: '/academics/facilities/academics-facilities/art&craft' },
+                { name: 'MUSIC ROOM', path: '/academics/facilities/academics-facilities/musicroom' },
               ]
             },
             { 
               name: 'OTHER FACILITIES', 
               path: '/academics/facilities/other-facilities',
               submenu: [
-                { name: 'Sports Complex', path: '/academics/facilities/other-facilities/sports-complex' },
-                { name: 'Auditorium', path: '/academics/facilities/other-facilities/auditorium' },
-                { name: 'Cafeteria', path: '/academics/facilities/other-facilities/cafeteria' },
-                { name: 'Playground', path: '/academics/facilities/other-facilities/playground' },
-                { name: 'Parking Area', path: '/academics/facilities/other-facilities/parking-area' }
+                { name: 'CYCLE STAND', path: '/academics/facilities/other-facilities/cycle-stand' },
+                { name: 'GUARD ROOM', path: '/academics/facilities/other-facilities/guard-room' },
+                { name: 'SICK ROOM', path: '/academics/facilities/other-facilities/sick-room' },
+                { name: 'ENTRY GATE', path: '/academics/facilities/other-facilities/entry-gate' },
+                { name: 'OTHER FACILITIES', path: '/academics/facilities/other-facilities/other-facilities' },
+                { name: 'BIOMETRIC ATTENDANCE', path: '/academics/facilities/other-facilities/biometric-attendance' }
               ]
             }
           ]
@@ -263,20 +250,11 @@ const Navbar = () => {
       ]
     },
     { 
-      name: 'Infrastructure', 
-      path: '/infrastructure',
-      dropdown: [
-        { name: 'Facilities', path: '/infrastructure/facilities' },
-        { name: 'Technology', path: '/infrastructure/technology' },
-        { name: 'Campus Tour', path: '/infrastructure/tour' }
-      ]
-    },
-    { 
       name: 'Admissions', 
       path: '/admissions',
       dropdown: [
-        { name: 'Process', path: '/admissions/process' },
-        { name: 'Eligibility', path: '/admissions/eligibility' },
+        { name: 'WHY CHOOSE OUR COLLEGE', path: '/admissions/why-choose-our-college' },
+        { name: 'ONLINE ADMISSION', path: '/admissions/online-admission' },
         { name: 'Fee Structure', path: '/admissions/fees' }
       ]
     },
