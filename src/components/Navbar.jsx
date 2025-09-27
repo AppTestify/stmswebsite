@@ -234,6 +234,8 @@ const Navbar = () => {
                     }
                   ]
                 },
+                { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/computer-laboratory' },
+                { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/physics-chemistry-biology-lab' },
                 { name: 'LIBRARY', path: '/academics/facilities/academics-facilities/library' }
               ]
             },
