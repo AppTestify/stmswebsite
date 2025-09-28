@@ -38,19 +38,7 @@ const Activities2024_2025 = () => {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {activities.map((activity, index) => (
-              <div key={index} className="bg-indigo-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="text-indigo-600 mb-4 flex justify-center">
-                  {activity.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{activity.title}</h3>
-                <p className="text-gray-600 text-sm">{activity.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img src="/images/collegeActivities2024-25.webp" alt="Activities 2024-2025" />
       </section>
     </div>
   )

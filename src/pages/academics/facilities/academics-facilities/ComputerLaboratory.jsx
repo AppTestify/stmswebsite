@@ -58,12 +58,111 @@ const ComputerLaboratory = () => {
             ))}
           </div>
 
-          {/* Lab Image */}
-          <div className="bg-gray-100 rounded-lg overflow-hidden">
-            <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <FaDesktop className="h-16 w-16 mx-auto mb-4" />
-                <p className="text-lg">Computer Lab Image Coming Soon</p>
+          {/* Computer Lab Images Gallery */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Computer Laboratory</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Explore our state-of-the-art computer laboratory equipped with modern technology 
+                and comfortable learning environment for digital education
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="/images/computerLab/33-550x500.webp" 
+                  alt="Computer Lab Workstation Setup" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <FaDesktop className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-white font-semibold text-lg">Workstation Setup</h3>
+                  <p className="text-blue-200 text-sm">Modern computer workstations for students</p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="/images/computerLab/34-550x500.webp" 
+                  alt="Computer Lab Learning Environment" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <FaUsers className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-white font-semibold text-lg">Learning Environment</h3>
+                  <p className="text-blue-200 text-sm">Comfortable and spacious learning space</p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="/images/computerLab/35-550x500.webp" 
+                  alt="Computer Lab Technology Setup" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <FaCog className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-white font-semibold text-lg">Technology Setup</h3>
+                  <p className="text-blue-200 text-sm">Advanced computer systems and software</p>
+                </div>
+              </div>
+              
+              <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="/images/computerLab/clab-550x500.webp" 
+                  alt="Computer Lab Overview" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <FaWifi className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <h3 className="text-white font-semibold text-lg">Lab Overview</h3>
+                  <p className="text-blue-200 text-sm">Complete computer laboratory facility</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Lab Benefits */}
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Computer Lab Excels</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <FaDesktop className="text-white text-2xl" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Modern Technology</h4>
+                  <p className="text-gray-600">
+                    Latest computer systems with updated software for cutting-edge digital learning experiences
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <FaWifi className="text-white text-2xl" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">High-Speed Internet</h4>
+                  <p className="text-gray-600">
+                    Reliable and fast internet connectivity for research, online learning, and digital projects
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <FaUsers className="text-white text-2xl" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Learning</h4>
+                  <p className="text-gray-600">
+                    Spacious layout designed for group work, peer learning, and collaborative digital projects
+                  </p>
+                </div>
               </div>
             </div>
           </div>
