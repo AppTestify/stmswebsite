@@ -24,6 +24,52 @@ const SoloDance = () => {
     }
   ]
 
+  // Real solo dance images from solodance folder
+  const soloDanceImages = [
+    {
+      id: 1,
+      src: "/images/solodance/IMG_6163-Copy-500x500.webp",
+      title: "Solo Dance Performance 1",
+      type: "Classical"
+    },
+    {
+      id: 2,
+      src: "/images/solodance/IMG_6185-500x500.webp",
+      title: "Solo Dance Performance 2",
+      type: "Folk"
+    },
+    {
+      id: 3,
+      src: "/images/solodance/IMG_6225-500x500.webp",
+      title: "Solo Dance Performance 3",
+      type: "Contemporary"
+    },
+    {
+      id: 4,
+      src: "/images/solodance/IMG_6318-500x500.webp",
+      title: "Solo Dance Performance 4",
+      type: "Bollywood"
+    },
+    {
+      id: 5,
+      src: "/images/solodance/IMG_6155-500x500.webp",
+      title: "Solo Dance Performance 5",
+      type: "Classical"
+    },
+    {
+      id: 6,
+      src: "/images/solodance/IMG_6340-500x500.webp",
+      title: "Solo Dance Performance 6",
+      type: "Folk"
+    },
+    {
+      id: 7,
+      src: "/images/solodance/IMG_6342-500x500.webp",
+      title: "Solo Dance Performance 7",
+      type: "Contemporary"
+    }
+  ]
+
   const danceCategories = [
     { id: 1, title: "Classical Dance", description: "Traditional Indian classical dance forms" },
     { id: 2, title: "Folk Dance", description: "Regional folk dance performances" },
@@ -61,6 +107,42 @@ const SoloDance = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{info.title}</h3>
                 <p className="text-gray-600 text-sm">{info.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Solo Dance Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {soloDanceImages.length} solo dance performance photos</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            {soloDanceImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaMusic className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Dance image not available</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{image.title}</h4>
+                  <span className="inline-block bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded-full">
+                    {image.type}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

@@ -24,6 +24,46 @@ const Picnic = () => {
     }
   ]
 
+  // Real picnic images from picnic folder
+  const picnicImages = [
+    {
+      id: 1,
+      src: "/images/picnic/IMG_6560-500x500.webp",
+      title: "Picnic Activity 1",
+      type: "Nature Trip"
+    },
+    {
+      id: 2,
+      src: "/images/picnic/IMG_6599-500x500.webp",
+      title: "Picnic Activity 2",
+      type: "Group Activity"
+    },
+    {
+      id: 3,
+      src: "/images/picnic/IMG_6582-500x500.webp",
+      title: "Picnic Activity 3",
+      type: "Photography"
+    },
+    {
+      id: 4,
+      src: "/images/picnic/IMG_6612-500x500.webp",
+      title: "Picnic Activity 4",
+      type: "Nature Trip"
+    },
+    {
+      id: 5,
+      src: "/images/picnic/IMG_6620-500x500.webp",
+      title: "Picnic Activity 5",
+      type: "Group Activity"
+    },
+    {
+      id: 6,
+      src: "/images/picnic/IMG_6551-500x500.webp",
+      title: "Picnic Activity 6",
+      type: "Photography"
+    }
+  ]
+
   const upcomingPicnics = [
     { id: 1, title: "Hill Station Visit", date: "2024-12-30", destination: "Mountain Resort" },
     { id: 2, title: "Beach Picnic", date: "2025-01-15", destination: "Coastal Area" },
@@ -65,6 +105,42 @@ const Picnic = () => {
           </div>
 
           <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Picnic Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {picnicImages.length} picnic activity photos</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {picnicImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaMountain className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Picnic image not available</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{image.title}</h4>
+                  <span className="inline-block bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">
+                    {image.type}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Upcoming Picnics</h3>
             <p className="text-gray-600">Plan your next outdoor adventure</p>
           </div>
@@ -79,7 +155,7 @@ const Picnic = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

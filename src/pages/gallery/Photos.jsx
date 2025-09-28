@@ -24,14 +24,21 @@ const Photos = () => {
     }
   ]
 
-  const samplePhotos = [
-    { id: 1, title: "College Building", category: "Campus" },
-    { id: 2, title: "Students in Classroom", category: "Academic" },
-    { id: 3, title: "Sports Day", category: "Sports" },
-    { id: 4, title: "Cultural Program", category: "Events" },
-    { id: 5, title: "Library", category: "Campus" },
-    { id: 6, title: "Laboratory", category: "Academic" }
-  ]
+  // Generate gallery images from the gallaryImages folder
+  const generateGalleryImages = () => {
+    const images = []
+    for (let i = 1; i <= 64; i++) {
+      images.push({
+        id: i,
+        src: `/images/gallaryImages/img${i}.webp`,
+        title: `Gallery Image ${i}`,
+        category: i <= 16 ? "Campus" : i <= 32 ? "Events" : i <= 48 ? "Academic" : "Sports"
+      })
+    }
+    return images
+  }
+
+  const galleryImages = generateGalleryImages()
 
   return (
     <div className="">
@@ -68,22 +75,36 @@ const Photos = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Recent Photos</h3>
-            <p className="text-gray-600">Latest additions to our photo collection</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Photo Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {galleryImages.length} photos from college events and activities</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {samplePhotos.map((photo) => (
-              <div key={photo.id} className="bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <FaCamera className="h-12 w-12 mx-auto mb-2" />
-                    <p className="text-sm">{photo.title}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {galleryImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaCamera className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Image not available</p>
+                    </div>
                   </div>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold text-gray-900">{photo.title}</h4>
-                  <p className="text-gray-600 text-sm">{photo.category}</p>
+                  <h4 className="font-semibold text-gray-900 text-sm mb-1">{image.title}</h4>
+                  <span className="inline-block bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded-full">
+                    {image.category}
+                  </span>
                 </div>
               </div>
             ))}

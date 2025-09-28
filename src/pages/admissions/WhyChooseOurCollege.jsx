@@ -47,20 +47,8 @@ const WhyChooseOurCollege = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reasons.map((reason, index) => (
-              <div key={index} className="bg-blue-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  {reason.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{reason.title}</h3>
-                <p className="text-gray-600 text-sm">{reason.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className="py-16 bg-white mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <img src="/images/whyChooseUs.webp" alt="Why Choose Our College" />
       </section>
     </div>
   )

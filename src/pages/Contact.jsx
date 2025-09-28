@@ -45,16 +45,14 @@ const Contact = () => {
       icon: FaPhone,
       title: 'Phone',
       details: [
-        '+91-XXXX-XXXXXX',
-        '+91-XXXX-XXXXXX'
+        '06254-241170'
       ]
     },
     {
       icon: FaEnvelope,
       title: 'Email',
       details: [
-        'info@stptedbettiah.com',
-        'admissions@stptedbettiah.com'
+        'ptedbth@gmail.com',
       ]
     },
     {
@@ -227,19 +225,38 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Map */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <FaMapMarkerAlt className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-600">Interactive Map</p>
-                    <p className="text-sm text-gray-500">Google Maps integration would go here</p>
-                  </div>
+                <div className="h-64 bg-gray-200">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.1234567890!2d84.5042391!3d26.8045359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39936ebee3f9df95%3A0xa1305124c692da01!2sSt%20Teresa%20School%20Rd%2C%20Bettiah%2C%20Bihar%20845438%2C%20India!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="St. Teresa's College Location"
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Location</h3>
-                  <p className="text-gray-600">
-                    St. Teresa's Primary Teachers Education College is located in the heart of Bettiah, 
-                    West Champaran, Bihar. We are easily accessible by road and public transport.
+                  <p className="text-gray-600 mb-4">
+                    St. Teresa's Primary Teachers Education College is located on St. Teresa School Road, 
+                    Bettiah, West Champaran, Bihar 845438. We are easily accessible by road and public transport.
                   </p>
+                  <div className="flex items-center space-x-4">
+                    <a
+                      href="https://www.google.com/maps/place/St+Teresa+School+Rd,+Bettiah,+Bihar+845438,+India/@26.804536,84.504239,10z/data=!4m6!3m5!1s0x39936ebee3f9df95:0xa1305124c692da01!8m2!3d26.8045359!4d84.5042391!16s%2Fg%2F1hc0x8fw_?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-300"
+                    >
+                      <FaMapMarkerAlt className="h-4 w-4 mr-2" />
+                      View on Google Maps
+                    </a>
+                    <span className="text-sm text-gray-500">
+                      Coordinates: 26.804536°N, 84.504239°E
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -266,7 +283,7 @@ const Contact = () => {
               </div>
 
               {/* Quick Contact */}
-              <div className="bg-teal-50 rounded-lg p-8">
+              {/* <div className="bg-teal-50 rounded-lg p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Contact</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
@@ -282,14 +299,14 @@ const Contact = () => {
                     <span className="text-gray-700">Mon-Fri: 9:00 AM - 5:00 PM</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -330,7 +347,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

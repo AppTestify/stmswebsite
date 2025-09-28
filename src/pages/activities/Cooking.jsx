@@ -24,6 +24,46 @@ const Cooking = () => {
     }
   ]
 
+  // Real cooking images from cooking folder
+  const cookingImages = [
+    {
+      id: 1,
+      src: "/images/cooking/IMG-20220425-WA0022-500x500.webp",
+      title: "Cooking Activity 1",
+      type: "Workshop"
+    },
+    {
+      id: 2,
+      src: "/images/cooking/IMG_20210911_095641-500x500.webp",
+      title: "Cooking Activity 2",
+      type: "Class"
+    },
+    {
+      id: 3,
+      src: "/images/cooking/IMG_6666-500x500.webp",
+      title: "Cooking Activity 3",
+      type: "Competition"
+    },
+    {
+      id: 4,
+      src: "/images/cooking/IMG_6698-500x500.webp",
+      title: "Cooking Activity 4",
+      type: "Workshop"
+    },
+    {
+      id: 5,
+      src: "/images/cooking/IMG_2612-500x500.webp",
+      title: "Cooking Activity 5",
+      type: "Class"
+    },
+    {
+      id: 6,
+      src: "/images/cooking/IMG_6682-500x500.webp",
+      title: "Cooking Activity 6",
+      type: "Competition"
+    }
+  ]
+
   const upcomingEvents = [
     { id: 1, title: "Traditional Cooking Workshop", date: "2024-12-22", type: "Workshop" },
     { id: 2, title: "Cooking Competition", date: "2024-12-28", type: "Competition" },
@@ -65,6 +105,42 @@ const Cooking = () => {
           </div>
 
           <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Cooking Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {cookingImages.length} cooking activity photos</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {cookingImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaUtensils className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Cooking image not available</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{image.title}</h4>
+                  <span className="inline-block bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full">
+                    {image.type}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Upcoming Events</h3>
             <p className="text-gray-600">Don't miss these exciting cooking activities</p>
           </div>
@@ -81,7 +157,7 @@ const Cooking = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

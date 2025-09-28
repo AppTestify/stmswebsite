@@ -34,12 +34,24 @@ const Awards = () => {
     }
   ]
 
-  const recentAwards = [
-    { id: 1, title: "Best Student of the Year", recipient: "Student Name", date: "2024-12-15", category: "Academic" },
-    { id: 2, title: "Sports Championship", recipient: "Sports Team", date: "2024-12-10", category: "Sports" },
-    { id: 3, title: "Cultural Excellence", recipient: "Cultural Group", date: "2024-12-05", category: "Cultural" },
-    { id: 4, title: "Leadership Award", recipient: "Student Leader", date: "2024-11-30", category: "Leadership" }
-  ]
+  // Generate award images from the awards folder
+  const generateAwardImages = () => {
+    const images = []
+    const imageNumbers = [7220, 7219, 7218, 7217, 7216, 7215, 7213, 7225, 7226, 7228, 7240, 7242, 7244, 7246, 7248, 7251, 7253, 7255, 7259, 7261, 7263, 7266, 7274, 7276, 7289, 7292, 7295, 7296, 7299]
+    
+    imageNumbers.forEach((num, index) => {
+      images.push({
+        id: index + 1,
+        src: `/images/awards/IMG_${num}.jpg`,
+        title: `Award Ceremony ${index + 1}`,
+        category: index < 10 ? "Academic" : index < 20 ? "Sports" : "Cultural",
+        date: "2024-12-15"
+      })
+    })
+    return images
+  }
+
+  const awardImages = generateAwardImages()
 
   return (
     <div className="">
@@ -76,21 +88,40 @@ const Awards = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Recent Awards</h3>
-            <p className="text-gray-600">Latest awards and recognitions</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Award Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {awardImages.length} award ceremony photos</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {recentAwards.map((award) => (
-              <div key={award.id} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold text-gray-900">{award.title}</h4>
-                  <span className="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded-full">
-                    {award.category}
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {awardImages.map((award) => (
+              <div key={award.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={award.src}
+                    alt={award.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaTrophy className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Award image not available</p>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-600 text-sm mb-2">Recipient: {award.recipient}</p>
-                <p className="text-gray-500 text-xs">Date: {award.date}</p>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{award.title}</h4>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-block bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded-full">
+                      {award.category}
+                    </span>
+                    <span className="text-gray-500 text-xs">{award.date}</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

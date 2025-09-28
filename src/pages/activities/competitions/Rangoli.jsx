@@ -24,6 +24,34 @@ const Rangoli = () => {
     }
   ]
 
+  // Real rangoli images from rangoli folder
+  const rangoliImages = [
+    {
+      id: 1,
+      src: "/images/rangoli/IMG_6377-500x500.webp",
+      title: "Rangoli Design 1",
+      type: "Traditional"
+    },
+    {
+      id: 2,
+      src: "/images/rangoli/IMG_6390-500x500.webp",
+      title: "Rangoli Design 2",
+      type: "Modern"
+    },
+    {
+      id: 3,
+      src: "/images/rangoli/IMG_6393-500x500.webp",
+      title: "Rangoli Design 3",
+      type: "Festival"
+    },
+    {
+      id: 4,
+      src: "/images/rangoli/IMG_6394-500x500.webp",
+      title: "Rangoli Design 4",
+      type: "Creative"
+    }
+  ]
+
   const upcomingEvents = [
     { id: 1, title: "Diwali Rangoli Competition", date: "2024-12-20", type: "Festival" },
     { id: 2, title: "Monthly Rangoli Contest", date: "2024-12-25", type: "Regular" },
@@ -65,11 +93,47 @@ const Rangoli = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Upcoming Events</h3>
-            <p className="text-gray-600">Don't miss these exciting rangoli competitions</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Rangoli Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {rangoliImages.length} beautiful rangoli designs</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {rangoliImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaPalette className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Rangoli image not available</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{image.title}</h4>
+                  <span className="inline-block bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">
+                    {image.type}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Upcoming Events</h3>
+            <p className="text-gray-600">Don't miss these exciting rangoli competitions</p>
+          </div> */}
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {upcomingEvents.map((event) => (
               <div key={event.id} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="text-center">
@@ -81,7 +145,7 @@ const Rangoli = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

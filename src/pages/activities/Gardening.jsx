@@ -24,6 +24,28 @@ const Gardening = () => {
     }
   ]
 
+  // Real gardening images from gardening folder
+  const gardeningImages = [
+    {
+      id: 1,
+      src: "/images/gardening/g1-500x500.webp",
+      title: "Gardening Activity 1",
+      type: "Plant Care"
+    },
+    {
+      id: 2,
+      src: "/images/gardening/g2-500x500.webp",
+      title: "Gardening Activity 2",
+      type: "Seed Planting"
+    },
+    {
+      id: 3,
+      src: "/images/gardening/g3-500x500.webp",
+      title: "Gardening Activity 3",
+      type: "Tree Planting"
+    }
+  ]
+
   const gardenProjects = [
     { id: 1, title: "Herb Garden", description: "Growing medicinal and culinary herbs" },
     { id: 2, title: "Flower Garden", description: "Beautiful flowering plants and decorative flowers" },
@@ -61,6 +83,42 @@ const Gardening = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{activity.title}</h3>
                 <p className="text-gray-600 text-sm">{activity.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Gardening Gallery</h3>
+            <p className="text-gray-600">Explore our collection of {gardeningImages.length} gardening activity photos</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {gardeningImages.map((image) => (
+              <div key={image.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="aspect-square bg-gray-200 overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                    <div className="text-center text-gray-500">
+                      <FaSeedling className="h-12 w-12 mx-auto mb-2" />
+                      <p className="text-sm">Gardening image not available</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 text-sm mb-2">{image.title}</h4>
+                  <span className="inline-block bg-emerald-100 text-emerald-600 text-xs px-2 py-1 rounded-full">
+                    {image.type}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
