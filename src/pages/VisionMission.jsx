@@ -86,7 +86,7 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
@@ -123,8 +123,7 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -157,7 +156,6 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* Objectives */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -186,7 +184,6 @@ const VisionMission = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <FaRocket className="h-16 w-16 text-white mx-auto mb-6" />
@@ -212,7 +209,7 @@ const VisionMission = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -52,7 +52,7 @@ const Prospectus = () => {
             <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-8">
               Your comprehensive guide to St. Teresa's Primary Teachers Education College
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center">
                 <FaDownload className="mr-2" />
                 Download Prospectus 2024
@@ -61,7 +61,7 @@ const Prospectus = () => {
                 <FaFilePdf className="mr-2" />
                 View Online
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

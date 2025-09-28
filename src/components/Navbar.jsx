@@ -155,7 +155,7 @@ const Navbar = () => {
   }, [location])
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    // { name: 'Home', path: '/' },
     { 
       name: 'About', 
       path: '/about',
@@ -194,30 +194,6 @@ const Navbar = () => {
               name: 'ACADEMICS FACILITIES', 
               path: '/academics/facilities/academics-facilities',
               submenu: [
-                // { 
-                //   name: 'LABORATORIES', 
-                //   path: '/academics/facilities/academics-facilities/laboratories',
-                //   submenu: [
-                //     { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/laboratories/computer-laboratory' },
-                //     { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/laboratories/physics-chemistry-biology-lab' },
-                //     {
-                //       name: 'SPECIALIZED LABS',
-                //       path: '/academics/facilities/academics-facilities/laboratories/specialized',
-                //       submenu: [
-                //         { name: 'ROBOTICS LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/robotics' },
-                //         { name: 'AI & ML LAB', path: '/academics/facilities/academics-facilities/laboratories/specialized/ai-ml' },
-                //         {
-                //           name: 'RESEARCH CENTERS',
-                //           path: '/academics/facilities/academics-facilities/laboratories/specialized/research',
-                //           submenu: [
-                //             { name: 'QUANTUM COMPUTING', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/quantum' },
-                //             { name: 'BIOTECH RESEARCH', path: '/academics/facilities/academics-facilities/laboratories/specialized/research/biotech' }
-                //           ]
-                //         }
-                //       ]
-                //     }
-                //   ]
-                // },
                 { name: 'COMPUTER LABORATORY', path: '/academics/facilities/academics-facilities/computer-laboratory' },
                 { name: 'PHYSICS, CHEMISTRY & BIOLOGY LAB', path: '/academics/facilities/academics-facilities/physics-chemistry-biology-lab' },
                 { name: 'LIBRARY', path: '/academics/facilities/academics-facilities/library' },
@@ -255,12 +231,41 @@ const Navbar = () => {
       dropdown: [
         { name: 'WHY CHOOSE OUR COLLEGE', path: '/admissions/why-choose-our-college' },
         { name: 'ONLINE ADMISSION', path: '/admissions/online-admission' },
-        { name: 'Fee Structure', path: '/admissions/fees' }
       ]
     },
-    { name: 'Gallery', path: '/gallery' },
+    { 
+      name: 'Gallary', 
+      path: '/gallary',
+      dropdown: [
+        { name: 'Photos', path: '/gallary/photos' },
+        { name: 'videos', path: '/gallary/videos' },
+      ]
+    },
+    { 
+      name: 'Annual Report', 
+      path: '/annual-report'
+    },
+    { 
+      name: 'Affiliation Certificate', 
+      path: '/affiliation-certificate'
+    },
+    { name: 'Activities', path: '/activities',
+      dropdown: [
+        { name: 'Awards', path: '/activities/awards' },
+        { name: 'Competitions', path: '/activities/competitions',
+          submenu: [
+            { name: 'Rangoli', path: '/activities/competitions/rangoli' },
+            { name: 'Solo Dance', path: '/activities/competitions/solo-dance' }
+          ]
+         },
+        { name: 'Cooking', path: '/activities/cooking' },
+        { name: 'Picnic', path: '/activities/picnic' },
+        { name: 'Gardening', path: '/activities/gardening' },
+      ]
+     },
     { name: 'Notices', path: '/notices' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'DELED COUNCIL WEBSITE', path: '/deled-council-website' }
   ]
 
   const handleDesktopMenuEnter = (index) => {
@@ -282,32 +287,72 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Blue Line */}
-      <div className="w-full h-1"></div>
       
       <nav className={`w-full z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-white'
+          : 'bg-white shadow-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          {/* University Branding */}
-          <div className="flex items-center justify-between py-4">
-            <Link to="/" className="flex w-full">
+          {/* University Branding and Navigation */}
+          <div className="flex items-center justify-between py-1">
+            <Link to="/" className="flex items-center">
               {/* Logo */}
-              <div className="lg:ml-20 flex-shrink-0">
-                <img src="/images/schoolLogo.webp" alt="Logo" className="w-20 h-20" />
+              <div className="flex-shrink-0 mr-4">
+                <img src="/images/schoolLogo.webp" alt="Logo" className="w-16 h-16" />
               </div>
               {/* University Name */}
-              <div className="w-full flex flex-col text-center justify-center">
-                <div className="text-sm md:text-xl lg:text-3xl font-extrabold font-serif text-blue-900 leading-tight">
-                  St. Teresa's Primary Teachers Education College
+              <div className="flex flex-col">
+                <div className="text-xs font-bold text-blue-800 leading-tight">
+                  ST. TERESA'S PRIMARY TEACHERS EDUCATION COLLEGE
                 </div>
-                <div className="text-xs md:text-lg text-blue-700 font-medium">
+                <div className="text-xs text-blue-700 font-medium">
                   Bettiah, West Champaran, Bihar
                 </div>
               </div>
             </Link>
+
+            {/* Desktop Navigation Menu */}
+            <div className="hidden md:flex items-center">
+              <div className="flex items-center">
+                {navItems.map((item, index) => (
+                  <div key={item.name} className="relative group">
+                    <Link
+                      to={item.path}
+                      className={`flex items-center px-2 py-2 text-xs font-medium transition-colors ${
+                        location.pathname === item.path
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      }`}
+                      onMouseEnter={() => handleDesktopMenuEnter(index)}
+                      onMouseLeave={handleDesktopMenuLeave}
+                    >
+                      {item.name}
+                      {item.dropdown && (
+                        <FaChevronDown className="ml-1 h-3 w-3" />
+                      )}
+                    </Link>
+                    
+                    {/* Desktop Dropdown Menu */}
+                    {item.dropdown && activeDropdown === index && (
+                      <div 
+                        className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-md border border-gray-200 z-50 transform transition-all duration-200"
+                        onMouseEnter={() => setActiveDropdown(index)}
+                        onMouseLeave={handleDesktopMenuLeave}
+                      >
+                        <RecursiveMenu 
+                          items={item.dropdown}
+                          level={0}
+                          activeMenuPath={desktopMenuPath}
+                          setActiveMenuPath={setDesktopMenuPath}
+                          isMobile={false}
+                        />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -317,48 +362,6 @@ const Navbar = () => {
               >
                 {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
               </button>
-            </div>
-          </div>
-
-          {/* Desktop Navigation Menu */}
-          <div className="hidden md:flex items-center border-t border-gray-200 justify-center py-3">
-            <div className="flex items-center">
-              {navItems.map((item, index) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`flex items-center px-4 py-2 border-r border-gray-200 text-sm font-medium transition-colors ${
-                      location.pathname === item.path
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    } ${index === navItems.length - 1 ? 'border-r-0' : ''}`}
-                    onMouseEnter={() => handleDesktopMenuEnter(index)}
-                    onMouseLeave={handleDesktopMenuLeave}
-                  >
-                    {item.name}
-                    {item.dropdown && (
-                      <FaChevronDown className="ml-1 h-3 w-3" />
-                    )}
-                  </Link>
-                  
-                  {/* Desktop Dropdown Menu */}
-                  {item.dropdown && activeDropdown === index && (
-                    <div 
-                      className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-md border border-gray-200 z-50 transform transition-all duration-200"
-                      onMouseEnter={() => setActiveDropdown(index)}
-                      onMouseLeave={handleDesktopMenuLeave}
-                    >
-                      <RecursiveMenu 
-                        items={item.dropdown}
-                        level={0}
-                        activeMenuPath={desktopMenuPath}
-                        setActiveMenuPath={setDesktopMenuPath}
-                        isMobile={false}
-                      />
-                    </div>
-                  )}
-                </div>
-              ))}
             </div>
           </div>
 

@@ -55,7 +55,7 @@ I invite you all to join us in our mission to educate, empower, and inspire. Tog
       </section>
 
       {/* Principal's Achievements */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -92,7 +92,7 @@ I invite you all to join us in our mission to educate, empower, and inspire. Tog
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       {/* <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">

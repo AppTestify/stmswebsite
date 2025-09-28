@@ -48,7 +48,7 @@ const Notices = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FaBullhorn } from 'react-icons/fa'
 
 const NewsTicker = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const navigate = useNavigate()
 
   const announcements = [
     "Admissions 2024-25: Applications are now open for Primary Teachers Education Course. Apply online at our website.",
@@ -10,8 +12,14 @@ const NewsTicker = () => {
     "Library Hours Extended: The college library will remain open till 8 PM on weekdays for student convenience.",
     "Faculty Development Program: Workshop on modern teaching methodologies scheduled for next month.",
     "Campus Placement Drive: Leading schools will be visiting our campus for teacher recruitment. Prepare your portfolios.",
-    "Cultural Festival 2024: Annual cultural festival 'Vidya Utsav' will be held next month. Registration forms available at the office."
+    "Cultural Festival 2024: Annual cultural festival 'Vidya Utsav' will be held next month. Registration forms available at the office.",
+    "COLLEGE ACTIVITIES FOR THE ACADEMIC YEAR 2025 – 2026: Important academic activities and events scheduled for the upcoming academic year.",
+    "SITTING TIMETABLE OF Second Unit Test 2025: Detailed timetable for the second unit test has been published. Check the notices section for complete schedule."
   ]
+
+  const handleClick = () => {
+    navigate('/notices')
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,7 +30,10 @@ const NewsTicker = () => {
   }, [announcements.length])
 
   return (
-    <div className="w-full bg-blue-900 text-white py-2 overflow-hidden">
+    <div 
+      className="w-full bg-blue-900 text-white py-2 overflow-hidden cursor-pointer hover:bg-blue-800 transition-colors duration-300"
+      onClick={handleClick}
+    >
       <div className="flex items-center">
         {/* Megaphone Icon */}
         <div className="flex-shrink-0 ml-4 mr-3">
