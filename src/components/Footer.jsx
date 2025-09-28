@@ -22,9 +22,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/academics" className="text-gray-300 hover:text-white transition-colors">Academics</Link></li>
+              {/* <li><Link to="/academics" className="text-gray-300 hover:text-white transition-colors">Academics</Link></li> */}
               <li><Link to="/admissions" className="text-gray-300 hover:text-white transition-colors">Admissions</Link></li>
-              <li><Link to="/gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</Link></li>
+              <li><Link to="/gallary/photos" className="text-gray-300 hover:text-white transition-colors">Gallery</Link></li>
               <li><Link to="/notices" className="text-gray-300 hover:text-white transition-colors">Notices</Link></li>
             </ul>
           </div>
@@ -39,11 +39,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="text-blue-400" />
-                <span className="text-gray-300 text-sm">+91-XXXX-XXXXXX</span>
+                <span className="text-gray-300 text-sm">06254-241170</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-blue-400" />
-                <span className="text-gray-300 text-sm">info@stptedbettiah.com</span>
+                <span className="text-gray-300 text-sm">ptedbth@gmail.com</span>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2024 St. Teresa's Primary Teachers Education College. All rights reserved.
+              © 2025 St. Teresa's Primary Teachers Education College. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">

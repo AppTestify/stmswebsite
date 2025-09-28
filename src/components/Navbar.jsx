@@ -171,7 +171,7 @@ const Navbar = () => {
     },
     { 
       name: 'Academics', 
-      path: '/academics',
+      // path: '/academics',
       dropdown: [
         { 
           name: 'OUR INFRASTRUCTURE', 
