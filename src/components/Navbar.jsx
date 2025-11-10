@@ -222,7 +222,11 @@ const Navbar = () => {
         { 
           name: 'FEE STRUCTURE', 
           path: '/academics/fee-structure'
-        }
+        },
+        { 
+          name: 'Annual Report', 
+          path: '/annual-report'
+        },
       ]
     },
     { 
@@ -241,10 +245,10 @@ const Navbar = () => {
         { name: 'videos', path: '/gallary/videos' },
       ]
     },
-    { 
-      name: 'Annual Report', 
-      path: '/annual-report'
-    },
+    // { 
+    //   name: 'Annual Report', 
+    //   path: '/annual-report'
+    // },
     { 
       name: 'Affiliation Certificate', 
       path: '/affiliation-certificate'
