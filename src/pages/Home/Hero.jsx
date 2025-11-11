@@ -30,6 +30,14 @@ const Hero = () => {
     {
       id: 3,
       image: "/images/slider/slider13.webp",
+    },
+    {
+      id: 4,
+      image: "/images/slider/slider14.webp",
+    },
+    {
+      id: 5,
+      image: "/images/slider/slider15.webp",
     }
   ]
 
@@ -102,7 +110,7 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gray-100">
       {/* Hero Carousel Section */}
-      <div className="relative h-[50vh] bg-blue-900">
+      <div className="relative h-[65vh] bg-blue-900">
         {/* Decorative Background Pattern */}
         <div 
           className="absolute inset-0 opacity-20"

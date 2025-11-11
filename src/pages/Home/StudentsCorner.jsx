@@ -23,7 +23,7 @@ const StudentsCorner = () => {
       id: 3,
       title: 'SEMINAR & WORKSHOP',
       icon: FaChalkboardTeacher,
-      path: '/seminars',
+      path: '/academics/infrastructure/gallery-room',
       description: 'Attend educational seminars and workshops',
       color: 'from-purple-500 to-purple-600'
     },

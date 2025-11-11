@@ -6,6 +6,7 @@ const TestimonialsPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedTestimonial, setSelectedTestimonial] = useState(null)
+  const [imageErrors, setImageErrors] = useState({})
   
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length)
@@ -23,6 +24,10 @@ const TestimonialsPage = () => {
   const closeModal = () => {
     setIsModalOpen(false)
     setSelectedTestimonial(null)
+  }
+
+  const handleImageError = (index) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }))
   }
   
   return (
@@ -141,11 +146,18 @@ const TestimonialsPage = () => {
                 onClick={() => openModal(testimonial, index)}
               >
                 <div className="flex items-center mb-3 md:mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-10 md:w-12 h-10 md:h-12 rounded-full object-cover mr-3 md:mr-4"
-                  />
+                  {imageErrors[index] || !testimonial.image ? (
+                    <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3 md:mr-4">
+                      <FaUser className="w-5 md:w-6 h-5 md:h-6 text-blue-600" />
+                    </div>
+                  ) : (
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-10 md:w-12 h-10 md:h-12 rounded-full object-cover mr-3 md:mr-4"
+                      onError={() => handleImageError(index)}
+                    />
+                  )}
                   <div>
                     <div className="font-semibold text-gray-900 text-sm md:text-base">{testimonial.name}</div>
                     <div className="text-blue-600 text-xs md:text-sm">{testimonial.course}</div>
@@ -202,11 +214,18 @@ const TestimonialsPage = () => {
               {/* Modal Header */}
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center space-x-4">
-                  <img
-                    src={selectedTestimonial.image}
-                    alt={selectedTestimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 shadow-lg"
-                  />
+                  {imageErrors[selectedTestimonial.index] || !selectedTestimonial.image ? (
+                    <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center border-4 border-blue-100 shadow-lg">
+                      <FaUser className="w-8 h-8 text-blue-600" />
+                    </div>
+                  ) : (
+                    <img
+                      src={selectedTestimonial.image}
+                      alt={selectedTestimonial.name}
+                      className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 shadow-lg"
+                      onError={() => handleImageError(selectedTestimonial.index)}
+                    />
+                  )}
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                       {selectedTestimonial.name}
@@ -214,10 +233,10 @@ const TestimonialsPage = () => {
                     <p className="text-blue-600 font-semibold text-lg">
                       {selectedTestimonial.course}
                     </p>
-                    <div className="text-gray-500 text-sm">
+                    {/* <div className="text-gray-500 text-sm">
                       <FaGraduationCap className="inline mr-1" />
                       Alumni
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <button

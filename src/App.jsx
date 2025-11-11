@@ -11,6 +11,7 @@ import Contact from './pages/Contact'
 import Testimonials from './pages/Testimonials'
 import CollegeAnthem from './pages/CollegeAnthem'
 import AcademicCalendar from './pages/AcademicCalendar'
+import Activities from './pages/Activities'
 import Events from './pages/Events'
 import Seminars from './pages/Seminars'
 import Facilities from './pages/Facilities'
@@ -89,6 +90,7 @@ function App() {
           <Route path="college-anthem" element={<CollegeAnthem />} />
           <Route path="prospectus" element={<Prospectus />} />
           <Route path="academic-calendar" element={<AcademicCalendar />} />
+          <Route path="activities" element={<Activities />} />
           <Route path="events" element={<Events />} />
           <Route path="seminars" element={<Seminars />} />
           <Route path="facilities" element={<Facilities />} />
