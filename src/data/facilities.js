@@ -62,8 +62,24 @@ export const testimonials = [
     id: 1,
     name: "Priya Sharma",
     course: "B.Ed Graduate 2023",
-    image: "/images/testimonials/priya.jpg",
-    text: "St. Teresa's College provided me with excellent education and practical training. The faculty is highly qualified and supportive. I'm now successfully working as a primary teacher."
+    image: "/images/testimonials/Father  Manish .jpg",
+    text: `"Great indeed are your works O' Lord, now and forever more". This song of joy echoes in our ears as we come
+to the campus of St. Teresa's Primary Teachers Education College, Bettiah. From a very small tiny seed that
+was sown in the year 1947, today it has grown big tree sheltering common flocks of people of the area. I
+wouldn't go wrong to say that the inception of the college goes together with the independence of our Nation.
+At one side our country got her freedom back from the hands of the British rules and on the other hand the
+women folk of the area got freedom to come out from their homes for greater learning. I feel extremely
+privileged to come from Bettiah Where Capuchin Fathers sowed the seed of faith, Jesuits and the Holy Cross
+Congregation have given us education. It was not just as education but was life transforming. They have
+changed everything in our lives. The education that is given at St. Teresa's Primary Teachers Education College
+is far better than any other reputed colleges and institutions. The teachers are professionally equipped to
+develop, adapt and modify curriculum, content, pedagogy and assessment which suit the needs and
+aspirations of would-be teachers. They work towards a holistic, experiential, integrated, students-centered
+educational system that helps to improve the creativity, critical thinking and problem-solving skills of our
+young learners to equip them for the ever-changing world. Holy Cross Sisters have done tremendous work in
+changing the society, especially women in their various capacities. The brightest example is St. Teresa's
+Primary Teachers Education College. I congratulate the management, dedicated teachers and future nations
+builders of the college.`
   },
   {
     id: 2,
