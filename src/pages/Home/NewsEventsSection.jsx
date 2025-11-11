@@ -73,38 +73,44 @@ const NewsEventsSection = () => {
     {
       id: 1,
       title: "Student Achievements",
-      image: "/images/news/student-achievements.webp",
+      image: "/images/awards/IMG_7213.jpg",
       description: "Students excel in D.L.Ed examination with outstanding results"
     },
     {
       id: 2,
-      title: "College Recognition",
-      image: "/images/news/college-recognition.webp",
-      description: "College receives recognition for academic excellence"
-    },
-    {
-      id: 3,
       title: "Award Ceremony",
-      image: "/images/news/award-ceremony.webp",
+      image: "/images/awards/IMG_7215.jpg",
       description: "Annual award ceremony for outstanding students"
     },
     {
-      id: 4,
+      id: 3,
       title: "Academic Excellence",
-      image: "/images/news/academic-excellence.webp",
+      image: "/images/gallaryImages/img1.webp",
       description: "College achieves 100% pass rate in recent examinations"
     },
     {
-      id: 5,
+      id: 4,
       title: "Cultural Program",
-      image: "/images/news/cultural-program.webp",
+      image: "/images/gallaryImages/img2.webp",
       description: "Annual cultural program showcases student talents"
     },
     {
-      id: 6,
+      id: 5,
       title: "Sports Achievement",
-      image: "/images/news/sports-achievement.webp",
+      image: "/images/playground/IMG_2171-500x500.webp",
       description: "Students win inter-college sports competition"
+    },
+    {
+      id: 6,
+      title: "College Activities",
+      image: "/images/gallaryImages/img3.webp",
+      description: "Various activities and events organized throughout the academic year"
+    },
+    {
+      id: 7,
+      title: "Student Recognition",
+      image: "/images/awards/IMG_7216.jpg",
+      description: "Outstanding students recognized for their achievements"
     }
   ]
 
@@ -113,107 +119,112 @@ const NewsEventsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-3 tracking-wide">
+            News & Events
+          </h2>
+          <div className="w-20 h-0.5 bg-gray-400 mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            Stay updated with the latest news, announcements, and upcoming events
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           
-          {/* Left Section - In News */}
-          <div className="bg-red-600 rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="flex items-center mb-6">
-                <FaNewspaper className="h-6 w-6 text-white mr-3" />
-                <h3 className="text-xl font-bold text-white">In News</h3>
+          {/* Left Section - Latest News */}
+          <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            <div className="bg-blue-600 px-6 py-4">
+              <div className="flex items-center">
+                <FaNewspaper className="h-5 w-5 text-white mr-3" />
+                <h3 className="text-lg font-semibold text-white font-serif">Latest News</h3>
               </div>
-              
-              <div className="h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-red-500 pr-2">
-                <div className="space-y-4">
-                  {newsImages.map((news) => (
-                    <div 
-                      key={news.id}
-                      className="bg-white rounded-lg p-4 cursor-pointer hover:shadow-md transition-shadow"
-                      onClick={() => setSelectedNewsImage(news)}
-                    >
-                      <div className="aspect-video bg-gray-200 rounded-lg mb-3 overflow-hidden">
-                        <img
-                          src={news.image}
-                          alt={news.title}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.target.style.display = 'none'
-                            e.target.nextSibling.style.display = 'flex'
-                          }}
-                        />
-                        <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
-                          <div className="text-center text-gray-500">
-                            <FaNewspaper className="h-8 w-8 mx-auto mb-2" />
-                            <p className="text-sm">Image coming soon</p>
-                          </div>
-                        </div>
-                      </div>
-                      <h4 className="font-semibold text-gray-900 text-sm mb-1">{news.title}</h4>
-                      <p className="text-gray-600 text-xs">{news.description}</p>
+            </div>
+            
+            <div className="p-6">
+              <div className="h-[400px] overflow-y-auto pr-2 space-y-4">
+                {newsItems.slice(0, 6).map((item, index) => (
+                  <div key={index} className="border-l-4 border-blue-500 pl-4 py-2 hover:bg-blue-50 transition-colors rounded-r">
+                    <div className="flex items-start gap-3">
+                      <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded flex-shrink-0 mt-0.5">
+                        {index + 1}
+                      </span>
+                      <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Middle Section - Latest News */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-r from-red-600 to-blue-600 text-white px-4 py-2 rounded-lg">
-                  <h3 className="text-lg font-bold">LATEST NEWS</h3>
-                </div>
+          {/* Middle Section - In News */}
+          <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            <div className="bg-indigo-600 px-6 py-4">
+              <div className="flex items-center">
+                <FaNewspaper className="h-5 w-5 text-white mr-3" />
+                <h3 className="text-lg font-semibold text-white font-serif">In News</h3>
               </div>
-              
-              <div className="h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200 pr-2">
-                <div className="space-y-4">
-                  {newsItems.slice(0, 6).map((item, index) => (
-                    <div key={index} className="border-l-4 border-blue-500 pl-4 py-2">
-                      <div className="flex items-start">
-                        <span className="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-1 rounded-full mr-3 flex-shrink-0">
-                          {index + 1}
-                        </span>
-                        <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
+            </div>
+            
+            <div className="p-6">
+              <div className="h-[400px] overflow-y-auto pr-2 space-y-4">
+                {newsImages.map((news) => (
+                  <div 
+                    key={news.id}
+                    className="bg-gray-50 rounded-lg p-3 cursor-pointer hover:shadow-md transition-all border border-gray-100"
+                    onClick={() => setSelectedNewsImage(news)}
+                  >
+                    <div className="aspect-video bg-gray-200 rounded mb-2 overflow-hidden">
+                      <img
+                        src={news.image}
+                        alt={news.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.target.style.display = 'none'
+                          if (e.target.nextSibling) {
+                            e.target.nextSibling.style.display = 'flex'
+                          }
+                        }}
+                      />
+                      <div className="hidden w-full h-full items-center justify-center">
+                        <div className="text-center text-gray-400">
+                          <FaNewspaper className="h-6 w-6 mx-auto mb-1" />
+                          <p className="text-xs">Image coming soon</p>
+                        </div>
                       </div>
                     </div>
-                  ))}
-                </div>
+                    <h4 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-1">{news.title}</h4>
+                    <p className="text-gray-600 text-xs line-clamp-2">{news.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
           {/* Right Section - College Events */}
-          <div className="bg-green-600 rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6">
-              <div className="flex items-center gap-3 justify-center mb-6">
-              <div className="bg-white p-4 rounded-full">
-                  <FaUsers className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">COLLEGE EVENTS</h3>
+          <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            <div className="bg-green-600 px-6 py-4">
+              <div className="flex items-center">
+                <FaCalendarAlt className="h-5 w-5 text-white mr-3" />
+                <h3 className="text-lg font-semibold text-white font-serif">College Events</h3>
               </div>
-              
-             
-              
-              <div className="h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-green-500 pr-2">
-                <div className="space-y-4">
-                  {collegeEvents.map((event) => (
-                    <div key={event.id} className="bg-white rounded-lg p-4">
-                      <div className="flex items-center mb-2">
-                        <FaCalendarAlt className="h-4 w-4 text-green-600 mr-2" />
-                        <span className="text-xs text-gray-500">
-                          {new Date(event.date).toLocaleDateString()}
-                        </span>
-                      </div>
-                      <h4 className="font-semibold text-gray-900 text-sm mb-1">{event.title}</h4>
-                      <span className="inline-block bg-green-100 text-green-600 text-xs px-2 py-1 rounded-full">
-                        {event.type}
-                      </span>
+            </div>
+            
+            <div className="p-6">
+              <div className="h-[400px] overflow-y-auto pr-2 space-y-3">
+                {collegeEvents.map((event) => (
+                  <div key={event.id} className="bg-gray-50 rounded-lg p-4 border border-gray-100 hover:shadow-md transition-shadow">
+                    <div className="flex items-center mb-2 text-xs text-gray-500">
+                      <FaCalendarAlt className="h-3 w-3 text-green-600 mr-2" />
+                      <span>{new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                     </div>
-                  ))}
-                </div>
+                    <h4 className="font-semibold text-gray-900 text-sm mb-2">{event.title}</h4>
+                    <span className="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
+                      {event.type}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

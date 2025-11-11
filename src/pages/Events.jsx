@@ -1,4 +1,4 @@
-const Activities2024_2025 = () => {
+const Events = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Title */}
@@ -6,7 +6,7 @@ const Activities2024_2025 = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h1 className="text-3xl md:text-4xl font-serif text-gray-900 mb-3 tracking-wide">
-              College Activities - Academic Year 2024-2025
+              Events Corner
             </h1>
             <div className="w-20 h-0.5 bg-gray-400 mx-auto"></div>
             <p className="text-base text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -34,4 +34,5 @@ const Activities2024_2025 = () => {
   )
 }
 
-export default Activities2024_2025
+export default Events
+

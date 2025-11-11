@@ -31,21 +31,23 @@ const NewsTicker = () => {
 
   return (
     <div 
-      className="w-full bg-blue-900 text-white py-2 overflow-hidden cursor-pointer hover:bg-blue-800 transition-colors duration-300"
+      className="w-full bg-blue-700 text-white py-2.5 overflow-hidden cursor-pointer hover:bg-blue-800 transition-colors duration-300 border-b border-blue-600"
       onClick={handleClick}
     >
-      <div className="flex items-center">
-        {/* Megaphone Icon */}
-        <div className="flex-shrink-0 ml-4 mr-3">
-          <FaBullhorn className="h-4 w-4 text-orange-400" />
-        </div>
-        
-        {/* Scrolling Text */}
-        <div className="flex-1 overflow-hidden">
-          <div className="animate-scroll whitespace-nowrap">
-            <span className="text-sm font-medium">
-              {announcements[currentIndex]}
-            </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center">
+          {/* Megaphone Icon */}
+          <div className="flex-shrink-0 mr-3">
+            <FaBullhorn className="h-4 w-4 text-orange-300" />
+          </div>
+          
+          {/* Scrolling Text */}
+          <div className="flex-1 overflow-hidden">
+            <div className="animate-scroll whitespace-nowrap">
+              <span className="text-sm font-medium">
+                {announcements[currentIndex]}
+              </span>
+            </div>
           </div>
         </div>
       </div>

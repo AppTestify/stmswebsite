@@ -10,6 +10,10 @@ import Notices from './pages/Notices'
 import Contact from './pages/Contact'
 import Testimonials from './pages/Testimonials'
 import CollegeAnthem from './pages/CollegeAnthem'
+import AcademicCalendar from './pages/AcademicCalendar'
+import Events from './pages/Events'
+import Seminars from './pages/Seminars'
+import Facilities from './pages/Facilities'
 import Prospectus from './pages/Prospectus'
 import TeamsQualification from './pages/TeamsQualification'
 import PrincipalMessage from './pages/PrincipalMessage'
@@ -84,6 +88,10 @@ function App() {
           <Route path="testimonials" element={<Testimonials />} />
           <Route path="college-anthem" element={<CollegeAnthem />} />
           <Route path="prospectus" element={<Prospectus />} />
+          <Route path="academic-calendar" element={<AcademicCalendar />} />
+          <Route path="events" element={<Events />} />
+          <Route path="seminars" element={<Seminars />} />
+          <Route path="facilities" element={<Facilities />} />
           <Route path="teams-qualification" element={<TeamsQualification />} />
           <Route path="principal-message" element={<PrincipalMessage />} />
           <Route path="vision-mission" element={<VisionMission />} />

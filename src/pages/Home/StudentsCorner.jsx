@@ -46,35 +46,36 @@ const StudentsCorner = () => {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-3 tracking-wide">
             Student's Corner
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <div className="w-20 h-0.5 bg-gray-400 mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Access important resources and information for students
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {studentCornerItems.map((item) => (
             <Link
               key={item.id}
               to={item.path}
               className="group"
             >
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-64 flex flex-col">
+              <div className="bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                 {/* Icon Section */}
-                <div className={`bg-gradient-to-br ${item.color} p-6 rounded-t-xl flex items-center justify-center flex-1`}>
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-                    <item.icon className="h-8 w-8 text-white" />
+                <div className={`bg-gradient-to-br ${item.color} p-6 rounded-t-lg flex items-center justify-center`}>
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                    <item.icon className="h-6 w-6 text-white" />
                   </div>
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-6 flex-1 flex flex-col justify-center">
-                  <h3 className="text-sm font-bold text-gray-900 text-center mb-2 leading-tight">
+                <div className="p-5 flex-1 flex flex-col justify-center">
+                  <h3 className="text-sm font-semibold text-gray-900 text-center mb-2 leading-tight">
                     {item.title}
                   </h3>
                   <p className="text-xs text-gray-600 text-center leading-relaxed">

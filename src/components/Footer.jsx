@@ -86,6 +86,19 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          <div className="mt-4 pt-4 border-t border-gray-800 text-center">
+            <p className="text-gray-400 text-sm">
+              Design and Maintained by{' '}
+              <a 
+                href="https://iqlexa.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors underline"
+              >
+                IQLEXA Technologies Private Limited
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

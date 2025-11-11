@@ -24,35 +24,31 @@ const Videos = () => {
     }
   ]
 
-  // Real videos from gallaryVideos folder
+  // Google Drive embedded videos
   const galleryVideos = [
     {
       id: 1,
-      title: "College Event Video 1",
-      src: "/images/gallaryVideos/video1.mp4",
-      category: "Events",
-      duration: "5:30"
+      title: "College Video 1",
+      embedUrl: "https://drive.google.com/file/d/18fJQ2DbLoyfYSRmBxBgPdPkBYeAViRlXCNnwWQvHBQ8/preview",
+      category: "Events"
     },
     {
       id: 2,
-      title: "College Event Video 2", 
-      src: "/images/gallaryVideos/video2.mp4",
-      category: "Events",
-      duration: "8:20"
+      title: "College Video 2", 
+      embedUrl: "https://drive.google.com/file/d/1ffeemkbDlqgo3fxq5Zraj3RErySyVjumeceF6a9qzpk/preview",
+      category: "Events"
     },
     {
       id: 3,
-      title: "College Event Video 3",
-      src: "/images/gallaryVideos/video4.mp4", 
-      category: "Academic",
-      duration: "6:15"
+      title: "College Video 3",
+      embedUrl: "https://drive.google.com/file/d/1ZVuZTL6urj7-Bt2XqHEhfa0LHneHw5T919k6bLT5mHI/preview", 
+      category: "Academic"
     },
     {
       id: 4,
-      title: "Teachers Day 2024",
-      src: "/images/gallaryVideos/Video-of-teachers-day-2024-1.mp4",
-      category: "Celebration",
-      duration: "12:45"
+      title: "College Video 4",
+      embedUrl: "https://drive.google.com/file/d/1T4v7ffgGQGRKwuQbXbwTtsWukiWiyqmx6ecYwzwbrMc/preview",
+      category: "Celebration"
     }
   ]
 
@@ -99,18 +95,13 @@ const Videos = () => {
             {galleryVideos.map((video) => (
               <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="aspect-video bg-gray-200 relative">
-                  <video
-                    src={video.src}
-                    controls
-                    className="w-full h-full object-cover"
-                    poster="/images/video-poster.jpg"
-                    preload="metadata"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">
-                    {video.duration}
-                  </div>
+                  <iframe
+                    src={video.embedUrl}
+                    className="w-full h-full"
+                    allow="autoplay"
+                    allowFullScreen
+                    title={video.title}
+                  ></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-semibold text-gray-900 text-lg mb-2">{video.title}</h4>
@@ -120,7 +111,7 @@ const Videos = () => {
                     </span>
                     <div className="flex items-center text-gray-500 text-sm">
                       <FaPlay className="h-4 w-4 mr-1" />
-                      <span>{video.duration}</span>
+                      <span>Watch Video</span>
                     </div>
                   </div>
                 </div>

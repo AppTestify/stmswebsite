@@ -6,9 +6,23 @@
     scroll-behavior: smooth;
   }
   
+  * {
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8fafc;
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .font-serif,
+  [class*="font-serif"] {
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  p, span, div, a, li, td, th, label, input, textarea, select, button {
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 }
 

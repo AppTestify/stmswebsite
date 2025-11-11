@@ -307,10 +307,10 @@ const Navbar = () => {
               </div>
               {/* University Name */}
               <div className="flex flex-col">
-                <div className="text-xs font-bold text-blue-800 leading-tight">
+                <div className="text-[10px] font-bold text-blue-800 leading-tight whitespace-nowrap">
                   ST. TERESA'S PRIMARY TEACHERS EDUCATION COLLEGE
                 </div>
-                <div className="text-xs text-blue-700 font-medium">
+                <div className="text-[10px] text-blue-700 font-medium whitespace-nowrap">
                   Bettiah, West Champaran, Bihar
                 </div>
               </div>
@@ -318,12 +318,12 @@ const Navbar = () => {
 
             {/* Desktop Navigation Menu */}
             <div className="hidden md:flex items-center">
-              <div className="flex items-center">
+              <div className="flex items-center flex-nowrap">
                 {navItems.map((item, index) => (
                   <div key={item.name} className="relative group">
                     <Link
                       to={item.path}
-                      className={`flex items-center px-2 py-2 text-xs font-medium transition-colors ${
+                      className={`flex items-center px-2 py-2 text-xs font-medium transition-colors whitespace-nowrap ${
                         location.pathname === item.path
                           ? 'bg-blue-600 text-white'
                           : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'

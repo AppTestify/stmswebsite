@@ -1,4 +1,4 @@
-import { FaCalendarAlt, FaTrophy, FaUsers, FaGraduationCap, FaBuilding, FaStar, FaAward, FaHeart } from 'react-icons/fa'
+import { FaCalendarAlt, FaTrophy, FaUsers, FaGraduationCap, FaBuilding, FaStar, FaAward, FaHeart, FaQuoteLeft } from 'react-icons/fa'
 
 const History = () => {
   const milestones = [
@@ -124,6 +124,67 @@ const History = () => {
 
       <section className="py-16 bg-white">
         <img src="/public/images/historyofcollege.webp" alt="History" className="w-full object-cover" />
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Quote Section */}
+            <div className="text-center mb-12">
+              <p className="text-lg text-gray-600 mb-6 italic">
+                Time plays a role in almost every decision
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-lg mb-8">
+                <FaQuoteLeft className="h-8 w-8 text-blue-600 mb-4" />
+                <p className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
+                  "Education is the most powerful weapon which you can use to change the world"
+                </p>
+                <p className="text-gray-600">– Nelson Mandela</p>
+              </div>
+            </div>
+
+            {/* Education Content */}
+            <div className="prose prose-lg max-w-none mb-12">
+              <p className="text-gray-700 leading-relaxed mb-6">
+                As Nelson Mandela says, "Education is the most Powerful weapon which you can use to change the world". Education is the key to Eliminating Gender inequality to reducing poverty, to creating sustainable planet, to preventing needless death and illness, and to fostering peace.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Education given as Knowledge of the world around us and changes it into something better. It develops in us a perspective of looking at life. It help us build opinions and have points of view on things in life. People debate over the subject of whether education is the only thing that gives knowledge.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                St. Teresa's Primary Teachers Education College, Bettiah, West Champaran Bihar, is a Catholic Minority College managed by the members of International catholic Women Religious Known as Sister of Mercy of the Holy Cross. The College Offered Primary Teachers Training Certificate course is Primary's Teachers Education. The course is of two years duration and It is conducted in regular Classes. The Academic session of this course is July to May.
+              </p>
+            </div>
+
+            {/* Who We Are & What We Do */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg shadow-md">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-600 p-3 rounded-full mr-4">
+                    <FaUsers className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">WHO WE ARE</h3>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  St. Teresa's Primary Teachers Education College, Bettiah, West Champaran Bihar, is a Catholic Minority College managed by the members of International catholic Women Religious Known as Sister of Mercy of the Holy Cross.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg shadow-md">
+                <div className="flex items-center mb-6">
+                  <div className="bg-green-600 p-3 rounded-full mr-4">
+                    <FaGraduationCap className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">WHAT WE DO</h3>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  The College Offered Primary Teachers Training Certificate course is Primary's Teachers Education. The course is of two years duration and It is conducted in regular Classes. The Academic session of this course is July to May.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Timeline Section */}
