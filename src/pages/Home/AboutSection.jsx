@@ -16,18 +16,38 @@ const AboutSection = () => {
           {/* Content */}
           <div className="space-y-6 text-base text-blue-900">
             <div>
-              <p className=" leading-relaxed mb-4">
-                St. Teresa's Primary Teachers Education College, Bettiah, West Champaran Bihar, is a Catholic Minority College managed by the members of International Catholic Women Religious Known as Sister of Mercy of the Holy Cross.
+              <p className="leading-relaxed mb-4">
+                Established in 1926 and operated by the Sisters of Mercy of the Holy Cross, St. Teresa's Primary Teachers Training College is an international minority educational institution. Its guiding motto is "Truth and Service."
               </p>
-              <p className=" leading-relaxed mb-4">
-                Established with a vision to empower women through quality teacher education, our college has been a beacon of excellence in the field of primary teacher training. We are committed to providing holistic education that combines academic rigor with values-based learning.
-              </p>
-              <p className="leading-relaxed">
-                Our institution focuses on developing competent, compassionate, and committed teachers who can make a significant impact in the field of education. We believe in nurturing not just academic excellence but also character building and social responsibility.
-              </p>
+              
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Milestones:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="font-semibold text-blue-600 mr-2">1926:</span>
+                    <span>The college was founded.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold text-blue-600 mr-2">1927:</span>
+                    <span>Classes began within St. Teresa's Girls' School.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold text-blue-600 mr-2">1972:</span>
+                    <span>The institution was renamed St. Teresa's Primary Teachers' Education College.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold text-blue-600 mr-2">1997:</span>
+                    <span>It received recognition from the National Council for Minority Education. In the same year, the eligibility for its 2-year training program was raised from Matriculation (10th) to Higher Secondary (12th grade).</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold text-blue-600 mr-2">1997-1998:</span>
+                    <span>The college gained affiliation with the Bihar School Examination Board and recognition from the ERC (Eastern Regional Council) of NCTE.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
+            {/* <div className="grid grid-cols-2 gap-6">
               <div className="flex items-center space-x-3">
                 <FaGraduationCap className="h-8 w-8 text-blue-600" />
                 <div>
@@ -56,7 +76,7 @@ const AboutSection = () => {
                   <div className="text-gray-600">Years Experience</div>
                 </div>
               </div>
-            </div>
+            </div> */}
             
             <Link
               to="/about"

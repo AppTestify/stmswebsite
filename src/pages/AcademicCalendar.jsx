@@ -80,48 +80,73 @@ const AcademicCalendar = () => {
       </section>
       <section className="py-10 md:py-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-            <div className="divide-y divide-gray-200">
-              {events.map((event, index) => (
-                <div 
-                  key={index}
-                  className={`p-5 hover:bg-gray-50 transition-colors ${
-                    event.isHoliday ? 'bg-red-50/50' : ''
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-3 max-w-3xl mx-auto">
-                    <div className="flex items-center gap-4 w-full justify-center">
-                      <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${
-                        event.isHoliday ? 'bg-red-100' : 'bg-blue-100'
-                      }`}>
-                        {event.isHoliday ? (
-                          <FaFlag className={`h-5 w-5 ${event.isHoliday ? 'text-red-600' : 'text-blue-600'}`} />
-                        ) : (
-                          <FaCalendarAlt className="h-5 w-5 text-blue-600" />
-                        )}
+          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                      <div className="flex items-center">
+                        <FaCalendarAlt className="mr-2" />
+                        Date
                       </div>
-                      <div className="flex-1 text-center">
-                        <div className="flex items-center justify-center gap-2 mb-1 flex-wrap">
+                    </th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider">
+                      Event / Activity
+                    </th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold uppercase tracking-wider">
+                      Type
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {events.map((event, index) => (
+                    <tr 
+                      key={index}
+                      className={`hover:bg-gray-50 transition-colors ${
+                        event.isHoliday ? 'bg-red-50/30' : ''
+                      }`}
+                    >
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="flex items-center">
+                          <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center mr-3 ${
+                            event.isHoliday ? 'bg-red-100' : 'bg-blue-100'
+                          }`}>
+                            {event.isHoliday ? (
+                              <FaFlag className="h-5 w-5 text-red-600" />
+                            ) : (
+                              <FaCalendarAlt className="h-5 w-5 text-blue-600" />
+                            )}
+                          </div>
                           <span className={`text-sm font-medium ${
-                            event.isHoliday ? 'text-red-600' : 'text-gray-500'
+                            event.isHoliday ? 'text-red-600' : 'text-gray-900'
                           }`}>
                             {event.date}
                           </span>
-                          {event.isHoliday && (
-                            <span className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">
-                              Holiday
-                            </span>
-                          )}
                         </div>
-                        <h3 className="text-base font-medium text-gray-900">
+                      </td>
+                      <td className="px-6 py-4">
+                        <div className="text-sm font-medium text-gray-900">
                           {event.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-center">
+                        {event.isHoliday ? (
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800">
+                            <FaFlag className="mr-1" />
+                            Holiday
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                            <FaCalendarAlt className="mr-1" />
+                            Event
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

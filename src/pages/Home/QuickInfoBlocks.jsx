@@ -23,47 +23,47 @@ const QuickInfoBlocks = () => {
     },
     {
       id: 2,
-      title: "Programmes and Courses",
+      title: "Prospectus",
       icon: FaGraduationCap,
-      path: "/academics",
+      path: "/prospectus",
       color: "bg-orange-500 hover:bg-orange-600",
       iconColor: "text-orange-600"
     },
     {
       id: 3,
-      title: "Committees",
+      title: "Fee Structure",
       icon: FaUsers,
-      path: "/about",
+      path: "/academics/fee-structure",
       color: "bg-pink-500 hover:bg-pink-600",
       iconColor: "text-pink-600"
     },
     {
       id: 4,
-      title: "E-Content/LMS",
+      title: "Awards",
       icon: FaLaptop,
-      path: "/academics",
+      path: "/activities/awards",
       color: "bg-green-500 hover:bg-green-600",
       iconColor: "text-green-600"
     },
     {
       id: 5,
-      title: "Annual Report",
+      title: "Activities",
       icon: FaFileAlt,
-      path: "/annual-report",
+      path: "/activities",
       color: "bg-purple-500 hover:bg-purple-600",
       iconColor: "text-purple-600"
     },
     {
       id: 6,
-      title: "NIRF",
+      title: "Online Admission",
       icon: FaPaperPlane,
-      path: "/about",
+      path: "/admissions/online-admission",
       color: "bg-yellow-500 hover:bg-yellow-600",
       iconColor: "text-yellow-600"
     },
     {
       id: 7,
-      title: "Journals & Publications",
+      title: "Academic Program",
       icon: FaBook,
       path: "/academics",
       color: "bg-indigo-500 hover:bg-indigo-600",

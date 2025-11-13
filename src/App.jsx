@@ -72,6 +72,7 @@ import Gardening from './pages/activities/Gardening'
 
 // DELED Council
 import DeledCouncilWebsite from './pages/DeledCouncilWebsite'
+import ActivitiesCalender from './pages/academics/Activities2024-2025'
 
 function App() {
   return (
@@ -124,7 +125,7 @@ function App() {
           <Route path="academics/facilities/other-facilities/biometric-attendance" element={<BiometricAttendance />} />
           
           {/* Academics Routes */}
-          <Route path="academics/activities-2024-2025" element={<Activities2024_2025 />} />
+          <Route path="academics/activities-2025-2026" element={<ActivitiesCalender />} />
           <Route path="academics/fee-structure" element={<FeeStructure />} />
           
           {/* Admissions Routes */}

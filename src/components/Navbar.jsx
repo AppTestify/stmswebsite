@@ -288,8 +288,8 @@ const Navbar = () => {
           ],
         },
         {
-          name: "COLLEGE ACTIVITIES-ACADEMIC YEAR 2024 – 2025",
-          path: "/academics/activities-2024-2025",
+          name: "COLLEGE ACTIVITIES-ACADEMIC YEAR 2025 – 2026",
+          path: "/academics/activities-2025-2026",
         },
         {
           name: "FEE STRUCTURE",

@@ -1,4 +1,4 @@
-const Activities2024_2025 = () => {
+const ActivitiesCalender = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Title */}
@@ -20,7 +20,7 @@ const Activities2024_2025 = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-wide drop-shadow-lg">
-              College Activities - Academic Year 2024-2025
+              College Activities - Academic Year 2025-2026
             </h1>
             <div className="w-20 h-0.5 bg-orange-400 mx-auto mb-4"></div>
             <p className="text-lg md:text-xl text-orange-100 mt-4 max-w-2xl mx-auto drop-shadow-md">
@@ -36,8 +36,8 @@ const Activities2024_2025 = () => {
           <div className="flex justify-center">
             <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-4 max-w-4xl w-full">
               <img 
-                src="/images/collegeActivities2024-25.webp" 
-                alt="College Activities 2024-2025" 
+                src="/images/activities/ACTIVITIES 2025-2026_page-0001.jpg" 
+                alt="College Activities 2025-2026" 
                 className="w-full h-auto object-contain"
               />
             </div>
@@ -48,4 +48,4 @@ const Activities2024_2025 = () => {
   )
 }
 
-export default Activities2024_2025
+export default ActivitiesCalender
