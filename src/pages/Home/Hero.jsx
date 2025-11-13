@@ -1,22 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { FaChevronLeft, FaChevronRight, FaGraduationCap, FaBook, FaUsers, FaCheckCircle, FaBullhorn } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight, FaGraduationCap, FaBook, FaUsers, FaCheckCircle } from 'react-icons/fa'
+import NewsTicker from '../../components/NewsTicker'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(0)
-  const navigate = useNavigate()
-
-  const announcements = [
-    "Admissions 2024-25: Applications are now open for Primary Teachers Education Course. Apply online at our website.",
-    "Annual Sports Meet 2024: Registration for various sports events is now open. Contact the sports department for details.",
-    "Library Hours Extended: The college library will remain open till 8 PM on weekdays for student convenience.",
-    "Faculty Development Program: Workshop on modern teaching methodologies scheduled for next month.",
-    "Campus Placement Drive: Leading schools will be visiting our campus for teacher recruitment. Prepare your portfolios.",
-    "Cultural Festival 2024: Annual cultural festival 'Vidya Utsav' will be held next month. Registration forms available at the office.",
-    "COLLEGE ACTIVITIES FOR THE ACADEMIC YEAR 2025 – 2026: Important academic activities and events scheduled for the upcoming academic year.",
-    "SITTING TIMETABLE OF Second Unit Test 2025: Detailed timetable for the second unit test has been published. Check the notices section for complete schedule."
-  ]
 
   const sliderData = [
     {
@@ -86,19 +73,6 @@ const Hero = () => {
     return () => clearInterval(interval)
   }, [sliderData.length])
 
-  // Auto-advance news ticker
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNewsIndex((prev) => (prev + 1) % announcements.length)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [announcements.length])
-
-  const handleNewsClick = () => {
-    navigate('/notices')
-  }
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderData.length)
   }
@@ -110,7 +84,7 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gray-100">
       {/* Hero Carousel Section */}
-      <div className="relative h-[65vh] bg-blue-900">
+      <div className="relative h-[30vh] md:h-[65vh] bg-blue-900">
         {/* Decorative Background Pattern */}
         <div 
           className="absolute inset-0 opacity-20"
@@ -171,32 +145,11 @@ const Hero = () => {
       </div>
 
       {/* News Ticker Section */}
-      <div 
-        className="w-full bg-blue-700 text-white py-2.5 overflow-hidden cursor-pointer hover:bg-blue-800 transition-colors duration-300"
-        onClick={handleNewsClick}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center">
-            {/* Megaphone Icon */}
-            <div className="flex-shrink-0 mr-3">
-              <FaBullhorn className="h-4 w-4 text-orange-300" />
-            </div>
-            
-            {/* Scrolling Text */}
-            <div className="flex-1 overflow-hidden">
-              <div className="animate-scroll whitespace-nowrap">
-                <span className="text-sm font-medium">
-                  {announcements[currentNewsIndex]}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* <NewsTicker /> */}
 
       {/* Feature Panels Section */}
-      <div className="bg-white">
-        {/* Red Header Panels */}
+      {/* <div className="bg-white">
+        
         <div className="grid grid-cols-1 md:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.id} className="bg-red-600 text-white py-4 px-6 flex items-center justify-center">
@@ -206,11 +159,11 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Feature Content with Images and Bullet Points */}
+       
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {features.map((feature) => (
             <div key={feature.id} className="bg-white border-r border-gray-200 last:border-r-0">
-              {/* Feature Image */}
+           
               <div className="relative h-64 overflow-hidden bg-gray-100">
                 <img
                   src={feature.image}
@@ -231,7 +184,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Bullet Points */}
               <div className="p-6">
                 <ul className="space-y-3">
                   {feature.points.map((point, index) => (
@@ -245,7 +197,7 @@ const Hero = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

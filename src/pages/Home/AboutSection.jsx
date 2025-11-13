@@ -3,17 +3,27 @@ import { FaArrowRight, FaGraduationCap, FaUsers, FaAward, FaLightbulb } from 're
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-4 px-5 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <h2 className="text-xl md:text-3xl font-serif font-bold text-gray-900 mb-3">
+            About St. Teresa's Primary Teachers Education College
+          </h2>
+          <div className="w-20 h-0.5 bg-blue-600 mx-auto mb-4"></div>
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 text-base text-blue-900">
             <div>
-              {/* <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                About Us
-              </h2> */}
-              <p className="text-lg text-gray-600 leading-relaxed">
-              St. Teresa’s Primary Teachers Education College, Bettiah, West Champaran Bihar, is a Catholic Minority College managed by the members of International catholic Women Religious Known as Sister of Mercy of the Holy Cross
+              <p className=" leading-relaxed mb-4">
+                St. Teresa's Primary Teachers Education College, Bettiah, West Champaran Bihar, is a Catholic Minority College managed by the members of International Catholic Women Religious Known as Sister of Mercy of the Holy Cross.
+              </p>
+              <p className=" leading-relaxed mb-4">
+                Established with a vision to empower women through quality teacher education, our college has been a beacon of excellence in the field of primary teacher training. We are committed to providing holistic education that combines academic rigor with values-based learning.
+              </p>
+              <p className="leading-relaxed">
+                Our institution focuses on developing competent, compassionate, and committed teachers who can make a significant impact in the field of education. We believe in nurturing not just academic excellence but also character building and social responsibility.
               </p>
             </div>
             
@@ -21,7 +31,7 @@ const AboutSection = () => {
               <div className="flex items-center space-x-3">
                 <FaGraduationCap className="h-8 w-8 text-blue-600" />
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">500+</div>
+                  <div className="text-2xl font-bold text-gray-900">5000+</div>
                   <div className="text-gray-600">Graduates</div>
                 </div>
               </div>
@@ -48,58 +58,39 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-gray-900">Our Mission</h3>
-              <p className="text-gray-600">
-                To provide quality teacher education that empowers students to become effective, 
-                innovative, and compassionate educators who can contribute meaningfully to 
-                the development of society.
-              </p>
-            </div>
-            
             <Link
               to="/about"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
             >
               Learn More About Us
               <FaArrowRight className="ml-2" />
             </Link>
           </div>
           
-          {/* Image */}
-          <div className="relative">
-            <div className="relative">
+          {/* Principal Image Section */}
+          <div className="lg:col-span-1">
+            <div className="bg-white  p-3 ">
               <img
-                src="public/images/aboutschool.webp"
-                alt="St. Teresa's College Building"
-                className="w-full h-96 object-cover rounded-lg shadow-xl"
+                src="/images/principalsMessage.webp"
+                alt="SR. PRAFULLA PANNA, Principal"
+                className="w-full h-96 object-contain rounded-lg"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
               />
-              <div className="absolute inset-0 bg-blue-600/20 rounded-lg"></div>
             </div>
-            
-            {/* Floating Cards */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center space-x-3">
-                <div className="bg-green-100 p-3 rounded-full">
-                  <FaGraduationCap className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-gray-900">Quality Education</div>
-                  <div className="text-gray-600 text-sm">NCTE Approved</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -top-6 -right-6 bg-white p-6 rounded-lg shadow-lg">
-              <div className="flex items-center space-x-3">
-                <div className="bg-blue-100 p-3 rounded-full">
-                  <FaUsers className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <div className="text-lg font-semibold text-gray-900">Expert Faculty</div>
-                  <div className="text-gray-600 text-sm">Highly Qualified</div>
-                </div>
-              </div>
+            <div className="mt-2 text-center">
+              <h3 className="text-base md:text-lg font-serif text-gray-900 mb-2 font-semibold">
+                SR. PRAFULLA PANNA
+              </h3>
+              <p className="text-xs text-gray-600 uppercase tracking-wide mb-2">Principal</p>
+              <div className="w-16 h-px bg-gray-300 mx-auto mb-3"></div>
+              <p className="text-xs text-gray-500 leading-relaxed">
+                St. Teresa's Primary Teachers Education College
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Bettiah, West Champaran, Bihar
+              </p>
             </div>
           </div>
         </div>
