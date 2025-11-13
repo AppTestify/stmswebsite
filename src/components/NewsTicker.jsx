@@ -4,16 +4,10 @@ import { FaBullhorn } from 'react-icons/fa'
 
 const NewsTicker = ({ 
   announcements = [
-    "Admissions 2024-25: Applications are now open for Primary Teachers Education Course. Apply online at our website.",
-    "Annual Sports Meet 2024: Registration for various sports events is now open. Contact the sports department for details.",
-    "Library Hours Extended: The college library will remain open till 8 PM on weekdays for student convenience.",
-    "Faculty Development Program: Workshop on modern teaching methodologies scheduled for next month.",
-    "Campus Placement Drive: Leading schools will be visiting our campus for teacher recruitment. Prepare your portfolios.",
-    "Cultural Festival 2024: Annual cultural festival 'Vidya Utsav' will be held next month. Registration forms available at the office.",
-    "COLLEGE ACTIVITIES FOR THE ACADEMIC YEAR 2025 – 2026: Important academic activities and events scheduled for the upcoming academic year.",
-    "SITTING TIMETABLE OF Second Unit Test 2025: Detailed timetable for the second unit test has been published. Check the notices section for complete schedule."
-  ],
-  scrollSpeed = 70,
+    "Demonstration Classes by Method Subject Lecturers",
+    "Second Unit Test Schedule"
+   ],
+  scrollSpeed = 10,
   redirectPath = '/notices',
   className = ''
 }) => {

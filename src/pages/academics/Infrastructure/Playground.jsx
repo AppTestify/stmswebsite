@@ -55,13 +55,13 @@ const Playground = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Playground Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Playground Facilities</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Explore our modern playground with state-of-the-art sports facilities designed for 
                 physical education, recreation, and competitive sports
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -112,7 +112,7 @@ const Playground = () => {
           </div>
 
           {/* Sports Facilities Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Available Sports</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {sports.map((sport, index) => (
@@ -125,10 +125,10 @@ const Playground = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Benefits Section */}
-          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Benefits of Our Playground</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -161,7 +161,7 @@ const Playground = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

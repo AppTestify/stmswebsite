@@ -54,13 +54,13 @@ const CycleStand = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Cycle Stand Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cycle Stand</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Discover our secure and convenient bicycle parking facility designed to provide 
                 safe storage and protection for student bicycles
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -96,7 +96,7 @@ const CycleStand = () => {
           </div>
 
           {/* Cycle Stand Features Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Cycle Stand Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -109,10 +109,10 @@ const CycleStand = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Cycle Stand Benefits */}
-          <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Cycle Stand Matters</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +145,7 @@ const CycleStand = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

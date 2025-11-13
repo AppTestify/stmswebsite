@@ -29,14 +29,14 @@ const Auditorium = () => {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <FaMicrophone className="h-16 w-16 text-purple-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Auditorium Facilities</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our state-of-the-art auditorium provides the perfect venue for conferences, seminars, 
               cultural events, and academic presentations with modern audio-visual equipment
             </p>
-          </div>
+          </div> */}
           
           {/* Image Gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -72,7 +72,7 @@ const Auditorium = () => {
           </div>
           
           {/* Features Section */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-purple-50 rounded-lg">
               <FaMicrophone className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Audio System</h3>
@@ -98,10 +98,10 @@ const Auditorium = () => {
                 Modern projection systems and LED displays for presentations and multimedia content
               </p>
             </div>
-          </div>
+          </div> */}
           
           {/* Additional Info Section */}
-          <div className="mt-16 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-8">
+          {/* <div className="mt-16 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Modern Auditorium Features</h3>
               <p className="text-gray-600 max-w-4xl mx-auto">
@@ -111,7 +111,7 @@ const Auditorium = () => {
                 features, and professional-grade equipment to ensure every event is a success.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

@@ -55,13 +55,13 @@ const MusicRoom = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Music Room Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Music Room</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Discover our dedicated music room designed to inspire musical creativity, 
                 education, and cultural activities with professional equipment and instruments
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -97,7 +97,7 @@ const MusicRoom = () => {
           </div>
 
           {/* Music Features Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Music Room Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {musicFeatures.map((feature, index) => (
@@ -110,10 +110,10 @@ const MusicRoom = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Music Benefits */}
-          <div className="bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Music Room Matters</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -146,7 +146,7 @@ const MusicRoom = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

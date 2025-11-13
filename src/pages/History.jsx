@@ -141,10 +141,10 @@ const History = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {/* Quote Section */}
+           
             <div className="text-center mb-12">
               <p className="text-lg text-gray-600 mb-6 italic">
                 Time plays a role in almost every decision
@@ -158,7 +158,7 @@ const History = () => {
               </div>
             </div>
 
-            {/* Education Content */}
+        
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-gray-700 leading-relaxed mb-6">
                 As Nelson Mandela says, "Education is the most Powerful weapon which you can use to change the world". Education is the key to Eliminating Gender inequality to reducing poverty, to creating sustainable planet, to preventing needless death and illness, and to fostering peace.
@@ -171,7 +171,7 @@ const History = () => {
               </p>
             </div>
 
-            {/* Who We Are & What We Do */}
+        
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg shadow-md">
                 <div className="flex items-center mb-6">
@@ -199,7 +199,7 @@ const History = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Timeline Section */}
       {/* <section className="py-16 md:py-20">

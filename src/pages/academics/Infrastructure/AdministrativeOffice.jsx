@@ -29,14 +29,14 @@ const AdministrativeOffice = () => {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <FaBuilding className="h-16 w-16 text-green-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Administrative Office</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our administrative office serves as the central hub for all college operations, 
               providing efficient support services to students, faculty, and staff
             </p>
-          </div>
+          </div> */}
           
           {/* Image Gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -72,7 +72,7 @@ const AdministrativeOffice = () => {
           </div>
           
           {/* Services Section */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-green-50 rounded-lg hover:shadow-md transition-shadow duration-300">
               <FaFileAlt className="h-10 w-10 text-green-600 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
@@ -104,10 +104,10 @@ const AdministrativeOffice = () => {
                 Regular business hours with extended support during peak periods
               </p>
             </div>
-          </div>
+          </div> */}
           
           {/* Contact Information */}
-          <div className="mt-16 bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-8">
+          {/* <div className="mt-16 bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Administrative Services</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -130,7 +130,7 @@ const AdministrativeOffice = () => {
                 and general inquiries with professionalism and efficiency.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

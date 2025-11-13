@@ -59,7 +59,7 @@ const ComputerLaboratory = () => {
       {/* Features Grid */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {labFeatures.map((feature, index) => (
               <div key={index} className="bg-blue-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
                 <div className="text-blue-600 mb-4 flex justify-center">
@@ -70,17 +70,17 @@ const ComputerLaboratory = () => {
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Computer Lab Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Computer Laboratory</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Explore our state-of-the-art computer laboratory equipped with modern technology 
                 and comfortable learning environment for digital education
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -146,7 +146,7 @@ const ComputerLaboratory = () => {
           </div>
 
           {/* Lab Benefits */}
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Computer Lab Excels</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -179,7 +179,7 @@ const ComputerLaboratory = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

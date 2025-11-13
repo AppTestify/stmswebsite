@@ -50,9 +50,9 @@ const BiometricAttendance = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Attendance Data Section */}
+      
           <div className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Live Attendance Data</h2>
@@ -81,7 +81,7 @@ const BiometricAttendance = () => {
               </div>
             </div>
 
-            {/* Attendance Statistics */}
+          
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="bg-white rounded-lg p-6 shadow-lg border border-violet-200">
                 <div className="flex items-center">
@@ -115,7 +115,7 @@ const BiometricAttendance = () => {
             </div>
           </div>
 
-          {/* Biometric Features Section */}
+      
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Biometric System Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -131,7 +131,7 @@ const BiometricAttendance = () => {
             </div>
           </div>
 
-          {/* System Benefits */}
+        
           <div className="bg-gradient-to-r from-violet-50 to-violet-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Biometric System Excels</h3>
@@ -167,7 +167,7 @@ const BiometricAttendance = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

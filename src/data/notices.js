@@ -2,7 +2,7 @@ export const notices = [
   
   {
     id: 1,
-    title: "Teachers Demo Class",
+    title: "Demonstration Classes by Method Subject Lecturers",
     date: "2025-01-15",
     category: "Academic",
     priority: "high",

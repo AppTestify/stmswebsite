@@ -29,13 +29,13 @@ const CollegeView = () => {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <FaBuilding className="h-16 w-16 text-blue-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Campus Infrastructure</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore our modern campus facilities and infrastructure designed to provide the best learning environment for future educators
             </p>
-          </div>
+          </div> */}
           
           {/* Image Gallery */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -107,7 +107,7 @@ const CollegeView = () => {
           </div>
           
           {/* Additional Info Section */}
-          <div className="mt-16 bg-gray-50 rounded-lg p-8">
+          {/* <div className="mt-16 bg-gray-50 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Modern Infrastructure</h3>
               <p className="text-gray-600 max-w-4xl mx-auto">
@@ -117,7 +117,7 @@ const CollegeView = () => {
                 and provide students with an excellent learning environment.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

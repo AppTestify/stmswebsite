@@ -55,13 +55,13 @@ const ArtCraftCenter = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Art and Craft Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Art and Craft Center</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Discover our vibrant creative space designed to inspire artistic expression, 
                 craft activities, and hands-on learning in various art forms
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -112,7 +112,7 @@ const ArtCraftCenter = () => {
           </div>
 
           {/* Art Features Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Art and Craft Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {artFeatures.map((feature, index) => (
@@ -125,10 +125,10 @@ const ArtCraftCenter = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Art Benefits */}
-          <div className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-pink-50 to-pink-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Art and Craft Center Matters</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -161,7 +161,7 @@ const ArtCraftCenter = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

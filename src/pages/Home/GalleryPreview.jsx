@@ -58,19 +58,19 @@ const GalleryPreview = () => {
                     <FaEye className="h-6 w-6 text-white" />
                   </div>
                 </div>
-                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                {/* <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {image.category}
-                </div>
+                </div> */}
               </div>
               
-              <div className="p-6">
+              {/* <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 ">
                   {image.title}
                 </h3>
                 <p className="text-gray-600 text-sm">
                   {image.alt}
                 </p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

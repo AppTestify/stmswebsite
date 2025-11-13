@@ -41,13 +41,13 @@ const OtherFacilities = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Other Facilities Images Gallery */}
           <div className="mb-16">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Additional Facilities</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Explore our comprehensive range of additional facilities designed to support 
                 campus life, student welfare, and administrative operations
               </p>
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -173,7 +173,7 @@ const OtherFacilities = () => {
           </div>
 
           {/* Other Facilities Features Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Additional Facilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {facilities.map((facility, index) => (
@@ -186,10 +186,10 @@ const OtherFacilities = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Other Facilities Benefits */}
-          <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-8">
+          {/* <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Our Additional Facilities Matter</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -222,7 +222,7 @@ const OtherFacilities = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

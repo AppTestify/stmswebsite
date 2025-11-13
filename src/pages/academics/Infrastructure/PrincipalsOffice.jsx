@@ -29,14 +29,14 @@ const PrincipalsOffice = () => {
       </section>
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          {/* <div className="text-center mb-12">
             <FaUserTie className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Principal's Office</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The heart of our institution where visionary leadership meets academic excellence, 
               guiding our mission to nurture future educators
             </p>
-          </div>
+          </div> */}
           
           {/* Principal's Office Image */}
           <div className="max-w-4xl mx-auto mb-16">
@@ -57,7 +57,7 @@ const PrincipalsOffice = () => {
           </div>
           
           {/* Leadership Values Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="text-center p-6 bg-indigo-50 rounded-lg hover:shadow-md transition-shadow duration-300">
               <FaGraduationCap className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Academic Excellence</h3>
@@ -81,10 +81,10 @@ const PrincipalsOffice = () => {
                 Building strong relationships with educational institutions and community partners
               </p>
             </div>
-          </div>
+          </div> */}
           
           {/* Vision and Mission */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg p-8">
               <div className="flex items-center mb-4">
                 <FaLightbulb className="h-8 w-8 text-indigo-600 mr-3" />
@@ -108,10 +108,10 @@ const PrincipalsOffice = () => {
                 academically sound, professionally competent, and socially responsible.
               </p>
             </div>
-          </div>
+          </div> */}
           
           {/* Leadership Message */}
-          <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-lg p-8 text-white">
+          {/* <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-lg p-8 text-white">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Leadership Message</h3>
               <p className="text-indigo-100 max-w-4xl mx-auto leading-relaxed">
@@ -125,7 +125,7 @@ const PrincipalsOffice = () => {
                 <p className="text-indigo-200 font-semibold">- Principal's Office</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
