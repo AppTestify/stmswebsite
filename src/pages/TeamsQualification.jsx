@@ -117,13 +117,27 @@ const TeamsQualification = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-indigo-700 py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/590570/pexels-photo-590570.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with purple/indigo tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/85 via-indigo-700/80 to-purple-600/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-indigo-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               Our Teams & Qualifications
             </h1>
-            <p className="text-lg md:text-xl text-purple-100 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-purple-100 max-w-3xl mx-auto drop-shadow-md">
               Meet our dedicated faculty and learn about the qualifications that make us exceptional
             </p>
           </div>

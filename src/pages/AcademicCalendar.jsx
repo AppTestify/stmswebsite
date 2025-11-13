@@ -55,17 +55,31 @@ const AcademicCalendar = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/590570/pexels-photo-590570.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with blue tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/80 to-blue-700/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-blue-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            Academic Calendar
+          </h1>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto drop-shadow-md">
+            Important dates and events for the academic year
+          </p>
+        </div>
+      </section>
       <section className="py-10 md:py-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center border-b border-gray-200 pb-6">
-            <h1 className="text-3xl md:text-4xl font-serif text-gray-900 mb-2 tracking-wide">
-              Academic Calendar
-            </h1>
-            <div className="w-20 h-0.5 bg-gray-400 mx-auto"></div>
-            <p className="text-base text-gray-600 mt-4">
-              Academic Year Events 2024-2025
-            </p>
-          </div>
 
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
             <div className="divide-y divide-gray-200">

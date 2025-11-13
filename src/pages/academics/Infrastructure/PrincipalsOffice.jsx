@@ -3,12 +3,26 @@ import { FaUserTie, FaGraduationCap, FaAward, FaHandshake, FaLightbulb, FaHeart 
 const PrincipalsOffice = () => {
   return (
     <div className="">
-      <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with indigo tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/85 via-indigo-800/80 to-indigo-700/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-indigo-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             Principal's Office
           </h1>
-          <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+          <p className="text-xl text-indigo-100 max-w-3xl mx-auto drop-shadow-md">
             The central administrative office where leadership guides our mission
           </p>
         </div>

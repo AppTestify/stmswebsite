@@ -26,9 +26,22 @@ const CycleStand = () => {
 
   return (
     <div className="">
-      <section className="bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with cyan tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/85 via-cyan-800/80 to-cyan-700/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-cyan-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             Cycle Stand
           </h1>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto">

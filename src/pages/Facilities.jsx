@@ -34,14 +34,36 @@ const Facilities = () => {
   return (
     <>
       <div className="min-h-screen bg-white">
-        <section className="py-10 md:py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-10 text-center border-b border-gray-200 pb-6">
-              <h1 className="text-3xl md:text-4xl font-serif text-gray-900 mb-2 tracking-wide">
+        <section 
+          className="relative py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+          }}
+        >
+          {/* Dark overlay with blue tint */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/80 to-blue-700/85"></div>
+          {/* Top accent bar */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-blue-500"></div>
+          {/* Pattern overlay for texture */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+          }}></div>
+          
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10 text-center">
+              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-wide drop-shadow-lg">
                 Our Infrastructure
               </h1>
-              <div className="w-20 h-0.5 bg-gray-400 mx-auto"></div>
+              <div className="w-20 h-0.5 bg-blue-400 mx-auto mb-4"></div>
+              <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto drop-shadow-md">
+                Explore our modern facilities and infrastructure
+              </p>
             </div>
+          </div>
+        </section>
+        
+        <section className="py-10 md:py-14 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {facilities.map((facility) => (

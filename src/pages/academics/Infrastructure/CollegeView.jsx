@@ -3,12 +3,26 @@ import { FaBuilding, FaMapMarkerAlt, FaUsers, FaCalendarAlt } from 'react-icons/
 const CollegeView = () => {
   return (
     <div className="">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section 
+        className="relative py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with blue tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/80 to-blue-700/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-blue-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             College View
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto drop-shadow-md">
             Discover our beautiful campus and modern infrastructure designed for excellence in teacher education
           </p>
         </div>

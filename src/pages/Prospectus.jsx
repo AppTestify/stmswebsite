@@ -43,13 +43,27 @@ const Prospectus = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-teal-700 py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+        }}
+      >
+        {/* Dark overlay with green/teal tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-600/85 via-teal-700/80 to-green-600/85"></div>
+        {/* Top accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-teal-500"></div>
+        {/* Pattern overlay for texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)'
+        }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               College Prospectus
             </h1>
-            <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-8 drop-shadow-md">
               Your comprehensive guide to St. Teresa's Primary Teachers Education College
             </p>
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
