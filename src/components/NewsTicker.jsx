@@ -4,10 +4,10 @@ import { FaBullhorn } from 'react-icons/fa'
 
 const NewsTicker = ({ 
   announcements = [
-    "Demonstration Classes by Method Subject Lecturers",
-    "Second Unit Test Schedule"
+    `School Experience
+Program 2( Internship - 2 ) for second year students from 03/11/ 2025 to 29/ 11/ 2025  in nine diffrent schools.`
    ],
-  scrollSpeed = 10,
+  scrollSpeed = 30,
   redirectPath = '/notices',
   className = ''
 }) => {
