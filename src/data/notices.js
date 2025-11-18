@@ -19,6 +19,26 @@ export const notices = [
     description: "Detailed timetable and schedule for the Second Unit Test 2025. Please check the PDF for complete information.",
     pdfUrl: "/images/notices/Second Unit Test.pdf",
     isUrgent: true
+  },
+  {
+    id: 3,
+    title: "Half Yearly Exam 2025",
+    date: "2025-01-25",
+    category: "Examination",
+    priority: "high",
+    description: "Notice regarding Half Yearly Examination 2025. Please check the PDF for complete schedule and guidelines.",
+    pdfUrl: "/images/notices/Half Yearly Exam 2025.pdf",
+    isUrgent: true
+  },
+  {
+    id: 4,
+    title: "Notice for SEP - 2",
+    date: "2025-01-28",
+    category: "Academic",
+    priority: "high",
+    description: "Notice for School Experience Program - 2 (SEP - 2). Please check the PDF for complete information.",
+    pdfUrl: "/images/notices/Notice for  SEP - 2.pdf",
+    isUrgent: false
   }
 ]
 

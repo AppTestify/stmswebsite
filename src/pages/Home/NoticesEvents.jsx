@@ -33,15 +33,25 @@ const NoticesEvents = () => {
   }, [isModalOpen])
 
   const handleNoticeClick = (notice) => {
-    // Map notice titles to their respective images
+    // Map notice titles to their respective images or PDFs
     const noticeImages = {
       "Demonstration Classes by Method Subject Lecturers": "/images/notices/Notice.png",
       "Teachers Demo Class": "/images/notices/Teachers Demo Class (1) (1)_page-0001.jpg",
       "Second Unit Test Schedule": "/images/notices/Second Unit Test (2)_page-0001.jpg"
     }
 
+    // Map notice titles to their respective PDFs
+    const noticePdfs = {
+      "Half Yearly Exam 2025": "/images/notices/Half Yearly Exam 2025.pdf",
+      "Notice for SEP - 2": "/images/notices/Notice for  SEP - 2.pdf"
+    }
+
     if (noticeImages[notice.title]) {
       setModalImage(noticeImages[notice.title])
+      setModalTitle(notice.title)
+      setIsModalOpen(true)
+    } else if (noticePdfs[notice.title]) {
+      setModalImage(noticePdfs[notice.title])
       setModalTitle(notice.title)
       setIsModalOpen(true)
     }
@@ -67,6 +77,16 @@ const NoticesEvents = () => {
       id: 3,
       title: "Second Unit Test Schedule",
       date: "20-01-2025"
+    },
+    {
+      id: 4,
+      title: "Half Yearly Exam 2025",
+      date: "25-01-2025"
+    },
+    {
+      id: 5,
+      title: "Notice for SEP - 2",
+      date: "28-01-2025"
     }
   ]
 
@@ -194,7 +214,7 @@ const NoticesEvents = () => {
             </div>
             <div className="bg-white p-6 max-h-96 overflow-y-auto custom-scrollbar">
               <div className="space-y-3">
-                {notices.map((notice, index) => (
+                {notices.reverse().map((notice, index) => (
                   <div
                     key={notice.id}
                     onClick={() => handleNoticeClick(notice)}
@@ -299,13 +319,34 @@ const NoticesEvents = () => {
               <FaTimes className="h-5 w-5 text-gray-700" />
             </button>
 
-            {/* Image */}
+            {/* Image or PDF */}
             <div className="overflow-y-auto max-h-[90vh]">
-              <img
-                src={modalImage}
-                alt={modalTitle}
-                className="w-full h-auto"
-              />
+              {modalImage.endsWith('.pdf') ? (
+                <div className="w-full" style={{ height: '80vh', minHeight: '500px' }}>
+                  <iframe
+                    src={`${modalImage}#toolbar=1&navpanes=1&scrollbar=1`}
+                    className="w-full h-full border-0"
+                    title={modalTitle}
+                  >
+                    <div className="p-8 text-center text-gray-600">
+                      <p>Your browser does not support PDFs.</p>
+                      <a 
+                        href={modalImage} 
+                        download
+                        className="text-blue-600 hover:text-blue-800 underline mt-2 inline-block"
+                      >
+                        Download the PDF instead
+                      </a>
+                    </div>
+                  </iframe>
+                </div>
+              ) : (
+                <img
+                  src={modalImage}
+                  alt={modalTitle}
+                  className="w-full h-auto"
+                />
+              )}
             </div>
           </div>
         </div>
