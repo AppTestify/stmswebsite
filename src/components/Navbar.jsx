@@ -310,7 +310,7 @@ const Navbar = () => {
     },
     {
       name: "Gallary",
-      path: "/gallary",
+      path: "/gallary/photos",
       dropdown: [
         { name: "Photos", path: "/gallary/photos" },
         { name: "videos", path: "/gallary/videos" },

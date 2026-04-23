@@ -59,7 +59,7 @@ const Error404 = () => {
                 <div className="text-sm font-medium">Admissions</div>
               </Link>
               <Link
-                to="/gallery"
+                to="/gallary/photos"
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-4 text-white transition-colors duration-300"
               >
                 <div className="text-sm font-medium">Gallery</div>

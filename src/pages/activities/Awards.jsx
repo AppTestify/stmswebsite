@@ -37,14 +37,30 @@ const Awards = () => {
   // Generate award images from the awards folder
   const generateAwardImages = () => {
     const images = []
-    const imageNumbers = [7220, 7219, 7218, 7217, 7216, 7215, 7213, 7225, 7226, 7228, 7240, 7242, 7244, 7246, 7248, 7251, 7253, 7255, 7259, 7261, 7263, 7266, 7274, 7276, 7289, 7292, 7295, 7296, 7299]
+    // New photos added via upload
+    const newFiles = ['IMG_1817.JPG', 'IMG_1794.JPG', 'IMG_1785.JPG', 'IMG_1781.JPG']
+    // Old photos
+    const oldNumbers = [7220, 7219, 7218, 7217, 7216, 7215, 7213, 7225, 7226, 7228, 7240, 7242, 7244, 7246, 7248, 7251, 7253, 7255, 7259, 7261, 7263, 7266, 7274, 7276, 7289, 7292, 7295, 7296, 7299]
     
-    imageNumbers.forEach((num, index) => {
+    // Process new files first
+    newFiles.forEach((filename, index) => {
       images.push({
         id: index + 1,
-        src: `/images/awards/IMG_${num}.jpg`,
+        src: `/images/awards/${filename}`,
         title: `Award Ceremony ${index + 1}`,
-        category: index < 10 ? "Academic" : index < 20 ? "Sports" : "Cultural",
+        category: "New",
+        date: "2024-12-23"
+      })
+    })
+
+    // Process old files
+    oldNumbers.forEach((num, index) => {
+      const globalIndex = newFiles.length + index + 1
+      images.push({
+        id: globalIndex,
+        src: `/images/awards/IMG_${num}.jpg`,
+        title: `Award Ceremony ${globalIndex}`,
+        category: globalIndex < 15 ? "Academic" : globalIndex < 25 ? "Sports" : "Cultural",
         date: "2024-12-15"
       })
     })
@@ -106,36 +122,27 @@ const Awards = () => {
             <p className="text-gray-600">Explore our collection of {awardImages.length} award ceremony photos</p>
           </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
             {awardImages.map((award) => (
-              <div key={award.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                <div className="aspect-square bg-gray-200 overflow-hidden">
+              <div key={award.id} className="break-inside-avoid bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                <div className="relative bg-gray-50">
                   <img
                     src={award.src}
                     alt={award.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
                     loading="lazy"
                     onError={(e) => {
                       e.target.style.display = 'none'
                       e.target.nextSibling.style.display = 'flex'
                     }}
                   />
-                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                  <div className="hidden w-full aspect-square bg-gray-200 items-center justify-center">
                     <div className="text-center text-gray-500">
                       <FaTrophy className="h-12 w-12 mx-auto mb-2" />
                       <p className="text-sm">Award image not available</p>
                     </div>
                   </div>
                 </div>
-                {/* <div className="p-4"> */}
-                  {/* <h4 className="font-semibold text-gray-900 text-sm mb-2">{award.title}</h4> */}
-                  <div className="flex items-center justify-between">
-                    {/* <span className="inline-block bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded-full">
-                      {award.category}
-                    </span>
-                    <span className="text-gray-500 text-xs">{award.date}</span> */}
-                  </div>
-                {/* </div> */}
               </div>
             ))}
           </div>

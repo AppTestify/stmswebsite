@@ -24,21 +24,24 @@ const Photos = () => {
     }
   ]
 
-  // Generate gallery images from the gallaryImages folder
-  const generateGalleryImages = () => {
-    const images = []
-    for (let i = 1; i <= 64; i++) {
-      images.push({
-        id: i,
-        src: `/images/gallaryImages/img${i}.webp`,
-        title: `Gallery Image ${i}`,
-        category: i <= 16 ? "Campus" : i <= 32 ? "Events" : i <= 48 ? "Academic" : "Sports"
-      })
-    }
-    return images
-  }
-
-  const galleryImages = generateGalleryImages()
+  // New organized gallery images
+  const galleryImages = [
+    'img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpeg', 'img5.jpeg', 'img6.jpeg', 'img7.jpeg', 'img8.jpeg', 'img9.jpeg', 'img10.jpg', 
+    'img11.jpg', 'img12.jpg', 'img13.jpg', 'img14.jpg', 'img15.jpg', 'img16.jpg', 'img17.jpg', 'img18.jpg', 'img19.jpg', 'img20.jpg', 
+    'img21.jpg', 'img22.jpg', 'img23.jpg', 'img24.jpg', 'img25.jpg', 'img26.jpg', 'img27.jpg', 'img28.jpg', 'img29.jpg', 'img30.jpg', 
+    'img31.jpg', 'img32.jpg', 'img33.jpg', 'img34.jpg', 'img35.jpg', 'img36.jpg', 'img37.jpg', 'img38.jpg', 'img39.jpg', 'img40.jpg', 
+    'img41.webp', 'img42.webp', 'img43.webp', 'img44.webp', 'img45.webp', 'img46.webp', 'img47.webp', 'img48.webp', 'img49.webp', 
+    'img50.webp', 'img51.webp', 'img52.webp', 'img53.webp', 'img54.webp', 'img55.webp', 'img56.webp', 'img57.webp', 'img58.webp', 
+    'img59.webp', 'img60.webp', 'img61.webp', 'img62.webp', 'img63.webp', 'img64.webp', 'img65.webp', 'img66.webp', 'img67.webp', 
+    'img68.webp', 'img69.webp', 'img70.webp', 'img71.webp', 'img72.webp', 'img73.webp', 'img74.webp', 'img75.webp', 'img76.webp', 
+    'img77.webp', 'img78.webp', 'img79.webp', 'img80.webp', 'img81.webp', 'img82.webp', 'img83.webp', 'img84.webp', 'img85.webp', 
+    'img86.webp', 'img87.webp', 'img88.webp'
+  ].map((filename, index) => ({
+    id: index + 1,
+    src: `/images/gallaryImages/${filename}`,
+    title: `Gallery Image ${index + 1}`,
+    category: index < 22 ? "Campus" : index < 44 ? "Events" : index < 66 ? "Academic" : "Sports"
+  }))
 
   return (
     <div className="">
@@ -93,26 +96,29 @@ const Photos = () => {
             <p className="text-gray-600">Explore our collection of {galleryImages.length} photos from college events and activities</p>
           </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
             {galleryImages.map((image) => (
-              <div key={image.id} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
-                <div className="aspect-square bg-gray-200 overflow-hidden">
+              <div key={image.id} className="break-inside-avoid bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group shadow-md">
+                <div className="relative bg-gray-50">
                   <img
                     src={image.src}
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
                     loading="lazy"
                     onError={(e) => {
                       e.target.style.display = 'none'
                       e.target.nextSibling.style.display = 'flex'
                     }}
                   />
-                  <div className="hidden w-full h-full bg-gray-200 items-center justify-center">
+                  <div className="hidden w-full aspect-square bg-gray-200 items-center justify-center">
                     <div className="text-center text-gray-500">
                       <FaCamera className="h-12 w-12 mx-auto mb-2" />
                       <p className="text-sm">Image not available</p>
                     </div>
                   </div>
+                  
+                  {/* Subtle overlay on hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"></div>
                 </div>
                 {/* <div className="p-4">
                   <h4 className="font-semibold text-gray-900 text-sm mb-1">{image.title}</h4>
