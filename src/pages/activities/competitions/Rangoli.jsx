@@ -28,26 +28,38 @@ const Rangoli = () => {
   const rangoliImages = [
     {
       id: 1,
-      src: "/images/rangoli/IMG_6377-500x500.webp",
+      src: "/images/rangoli/Image (2).jpeg",
       title: "Rangoli Design 1",
       type: "Traditional"
     },
     {
       id: 2,
-      src: "/images/rangoli/IMG_6390-500x500.webp",
+      src: "/images/rangoli/Image (3).jpeg",
       title: "Rangoli Design 2",
       type: "Modern"
     },
     {
       id: 3,
-      src: "/images/rangoli/IMG_6393-500x500.webp",
+      src: "/images/rangoli/Image (4).jpeg",
       title: "Rangoli Design 3",
       type: "Festival"
     },
     {
       id: 4,
-      src: "/images/rangoli/IMG_6394-500x500.webp",
+      src: "/images/rangoli/IMG_6377-500x500.webp",
       title: "Rangoli Design 4",
+      type: "Traditional"
+    },
+    {
+      id: 5,
+      src: "/images/rangoli/IMG_6393-500x500.webp",
+      title: "Rangoli Design 5",
+      type: "Festival"
+    },
+    {
+      id: 6,
+      src: "/images/rangoli/IMG_6394-500x500.webp",
+      title: "Rangoli Design 6",
       type: "Creative"
     }
   ]
@@ -110,26 +122,16 @@ const Rangoli = () => {
             <p className="text-gray-600">Explore our collection of {rangoliImages.length} beautiful rangoli designs</p>
           </div> */}
 
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {rangoliImages.map((image) => (
-              <div key={image.id} className="break-inside-avoid bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                <div className="relative bg-gray-50">
+              <div key={image.id} className="relative group cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50 flex items-center justify-center">
+                <div className="aspect-[4/3] w-full flex items-center justify-center">
                   <img
                     src={image.src}
                     alt={image.title}
-                    className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500"
+                    className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.nextSibling.style.display = 'flex'
-                    }}
                   />
-                  <div className="hidden w-full aspect-square bg-gray-200 items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <FaPalette className="h-12 w-12 mx-auto mb-2" />
-                      <p className="text-sm">Rangoli image not available</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}

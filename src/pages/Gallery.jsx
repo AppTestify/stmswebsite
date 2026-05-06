@@ -124,36 +124,19 @@ const Gallery = () => {
               <p className="text-gray-600">Try adjusting your search or filter criteria</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredImages.map((image, index) => (
                 <div
                   key={image.id}
-                  className="group relative bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
+                  className="relative group cursor-pointer overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 bg-gray-50 flex items-center justify-center"
                   onClick={() => openLightbox(image, index)}
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="aspect-[4/3] w-full flex items-center justify-center">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
-                        <FaSearch className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div className="absolute top-4 left-4 bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {image.category}
-                    </div>
-                  </div>
-                  
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {image.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm line-clamp-2">
-                      {image.alt}
-                    </p>
                   </div>
                 </div>
               ))}

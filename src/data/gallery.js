@@ -107,9 +107,30 @@ export const galleryImages = [
   {
     id: 16,
     src: "/images/gallery/teachers.jpg",
-    alt: "Faculty Members",
+    alt: "Our Faculty",
     category: "Faculty",
     title: "Our Faculty"
+  },
+  {
+    id: 17,
+    src: "/images/rangoli/Image (2).jpeg",
+    alt: "Traditional Rangoli Design",
+    category: "Events",
+    title: "Rangoli Competition"
+  },
+  {
+    id: 18,
+    src: "/images/rangoli/Image (3).jpeg",
+    alt: "Modern Rangoli Design",
+    category: "Events",
+    title: "Rangoli Competition"
+  },
+  {
+    id: 19,
+    src: "/images/rangoli/Image (4).jpeg",
+    alt: "Festival Rangoli Design",
+    category: "Events",
+    title: "Rangoli Competition"
   }
 ]
 
